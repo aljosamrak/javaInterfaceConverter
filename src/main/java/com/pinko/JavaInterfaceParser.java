@@ -1,226 +1,226 @@
-// Generated from Java8.g4 by ANTLR 4.5
+package com.pinko;// Generated from Java8.g4 by ANTLR 4.5
+
+import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
-import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.misc.*;
 import org.antlr.v4.runtime.tree.*;
+
 import java.util.List;
-import java.util.Iterator;
-import java.util.ArrayList;
 
 @SuppressWarnings({"all", "warnings", "unchecked", "unused", "cast"})
-public class Java8Parser extends Parser {
+public class JavaInterfaceParser extends Parser {
 	static { RuntimeMetaData.checkVersion("4.5", RuntimeMetaData.VERSION); }
 
 	protected static final DFA[] _decisionToDFA;
 	protected static final PredictionContextCache _sharedContextCache =
 		new PredictionContextCache();
 	public static final int
-		ABSTRACT=1, ASSERT=2, BOOLEAN=3, BREAK=4, BYTE=5, CASE=6, CATCH=7, CHAR=8, 
-		CLASS=9, CONST=10, CONTINUE=11, DEFAULT=12, DO=13, DOUBLE=14, ELSE=15, 
-		ENUM=16, EXTENDS=17, FINAL=18, FINALLY=19, FLOAT=20, FOR=21, IF=22, GOTO=23, 
-		IMPLEMENTS=24, IMPORT=25, INSTANCEOF=26, INT=27, INTERFACE=28, LONG=29, 
-		NATIVE=30, NEW=31, PACKAGE=32, PRIVATE=33, PROTECTED=34, PUBLIC=35, RETURN=36, 
-		SHORT=37, STATIC=38, STRICTFP=39, SUPER=40, SWITCH=41, SYNCHRONIZED=42, 
-		THIS=43, THROW=44, THROWS=45, TRANSIENT=46, TRY=47, VOID=48, VOLATILE=49, 
-		WHILE=50, IntegerLiteral=51, FloatingPointLiteral=52, BooleanLiteral=53, 
-		CharacterLiteral=54, StringLiteral=55, NullLiteral=56, LPAREN=57, RPAREN=58, 
-		LBRACE=59, RBRACE=60, LBRACK=61, RBRACK=62, SEMI=63, COMMA=64, DOT=65, 
-		ASSIGN=66, GT=67, LT=68, BANG=69, TILDE=70, QUESTION=71, COLON=72, EQUAL=73, 
-		LE=74, GE=75, NOTEQUAL=76, AND=77, OR=78, INC=79, DEC=80, ADD=81, SUB=82, 
-		MUL=83, DIV=84, BITAND=85, BITOR=86, CARET=87, MOD=88, ARROW=89, COLONCOLON=90, 
-		ADD_ASSIGN=91, SUB_ASSIGN=92, MUL_ASSIGN=93, DIV_ASSIGN=94, AND_ASSIGN=95, 
-		OR_ASSIGN=96, XOR_ASSIGN=97, MOD_ASSIGN=98, LSHIFT_ASSIGN=99, RSHIFT_ASSIGN=100, 
-		URSHIFT_ASSIGN=101, Identifier=102, AT=103, ELLIPSIS=104, WS=105, COMMENT=106, 
+		ABSTRACT=1, ASSERT=2, BOOLEAN=3, BREAK=4, BYTE=5, CASE=6, CATCH=7, CHAR=8,
+		CLASS=9, CONST=10, CONTINUE=11, DEFAULT=12, DO=13, DOUBLE=14, ELSE=15,
+		ENUM=16, EXTENDS=17, FINAL=18, FINALLY=19, FLOAT=20, FOR=21, IF=22, GOTO=23,
+		IMPLEMENTS=24, IMPORT=25, INSTANCEOF=26, INT=27, INTERFACE=28, LONG=29,
+		NATIVE=30, NEW=31, PACKAGE=32, PRIVATE=33, PROTECTED=34, PUBLIC=35, RETURN=36,
+		SHORT=37, STATIC=38, STRICTFP=39, SUPER=40, SWITCH=41, SYNCHRONIZED=42,
+		THIS=43, THROW=44, THROWS=45, TRANSIENT=46, TRY=47, VOID=48, VOLATILE=49,
+		WHILE=50, IntegerLiteral=51, FloatingPointLiteral=52, BooleanLiteral=53,
+		CharacterLiteral=54, StringLiteral=55, NullLiteral=56, LPAREN=57, RPAREN=58,
+		LBRACE=59, RBRACE=60, LBRACK=61, RBRACK=62, SEMI=63, COMMA=64, DOT=65,
+		ASSIGN=66, GT=67, LT=68, BANG=69, TILDE=70, QUESTION=71, COLON=72, EQUAL=73,
+		LE=74, GE=75, NOTEQUAL=76, AND=77, OR=78, INC=79, DEC=80, ADD=81, SUB=82,
+		MUL=83, DIV=84, BITAND=85, BITOR=86, CARET=87, MOD=88, ARROW=89, COLONCOLON=90,
+		ADD_ASSIGN=91, SUB_ASSIGN=92, MUL_ASSIGN=93, DIV_ASSIGN=94, AND_ASSIGN=95,
+		OR_ASSIGN=96, XOR_ASSIGN=97, MOD_ASSIGN=98, LSHIFT_ASSIGN=99, RSHIFT_ASSIGN=100,
+		URSHIFT_ASSIGN=101, Identifier=102, AT=103, ELLIPSIS=104, WS=105, COMMENT=106,
 		LINE_COMMENT=107;
 	public static final int
-		RULE_literal = 0, RULE_type = 1, RULE_primitiveType = 2, RULE_numericType = 3, 
-		RULE_integralType = 4, RULE_floatingPointType = 5, RULE_referenceType = 6, 
-		RULE_classOrInterfaceType = 7, RULE_classType = 8, RULE_classType_lf_classOrInterfaceType = 9, 
-		RULE_classType_lfno_classOrInterfaceType = 10, RULE_interfaceType = 11, 
-		RULE_interfaceType_lf_classOrInterfaceType = 12, RULE_interfaceType_lfno_classOrInterfaceType = 13, 
-		RULE_typeVariable = 14, RULE_arrayType = 15, RULE_dims = 16, RULE_typeParameter = 17, 
-		RULE_typeParameterModifier = 18, RULE_typeBound = 19, RULE_additionalBound = 20, 
-		RULE_typeArguments = 21, RULE_typeArgumentList = 22, RULE_typeArgument = 23, 
-		RULE_wildcard = 24, RULE_wildcardBounds = 25, RULE_packageName = 26, RULE_typeName = 27, 
-		RULE_packageOrTypeName = 28, RULE_expressionName = 29, RULE_methodName = 30, 
-		RULE_ambiguousName = 31, RULE_compilationUnit = 32, RULE_packageDeclaration = 33, 
-		RULE_packageModifier = 34, RULE_importDeclaration = 35, RULE_singleTypeImportDeclaration = 36, 
-		RULE_typeImportOnDemandDeclaration = 37, RULE_singleStaticImportDeclaration = 38, 
-		RULE_staticImportOnDemandDeclaration = 39, RULE_typeDeclaration = 40, 
-		RULE_classDeclaration = 41, RULE_normalClassDeclaration = 42, RULE_classModifier = 43, 
-		RULE_typeParameters = 44, RULE_typeParameterList = 45, RULE_superclass = 46, 
-		RULE_superinterfaces = 47, RULE_interfaceTypeList = 48, RULE_classBody = 49, 
-		RULE_classBodyDeclaration = 50, RULE_classMemberDeclaration = 51, RULE_fieldDeclaration = 52, 
-		RULE_fieldModifier = 53, RULE_variableDeclaratorList = 54, RULE_variableDeclarator = 55, 
-		RULE_variableDeclaratorId = 56, RULE_variableInitializer = 57, RULE_unannType = 58, 
-		RULE_unannPrimitiveType = 59, RULE_unannReferenceType = 60, RULE_unannClassOrInterfaceType = 61, 
-		RULE_unannClassType = 62, RULE_unannClassType_lf_unannClassOrInterfaceType = 63, 
-		RULE_unannClassType_lfno_unannClassOrInterfaceType = 64, RULE_unannInterfaceType = 65, 
-		RULE_unannInterfaceType_lf_unannClassOrInterfaceType = 66, RULE_unannInterfaceType_lfno_unannClassOrInterfaceType = 67, 
-		RULE_unannTypeVariable = 68, RULE_unannArrayType = 69, RULE_methodDeclaration = 70, 
-		RULE_methodModifier = 71, RULE_methodHeader = 72, RULE_result = 73, RULE_methodDeclarator = 74, 
-		RULE_formalParameterList = 75, RULE_formalParameters = 76, RULE_formalParameter = 77, 
-		RULE_variableModifier = 78, RULE_lastFormalParameter = 79, RULE_receiverParameter = 80, 
-		RULE_throws_ = 81, RULE_exceptionTypeList = 82, RULE_exceptionType = 83, 
-		RULE_methodBody = 84, RULE_instanceInitializer = 85, RULE_staticInitializer = 86, 
-		RULE_constructorDeclaration = 87, RULE_constructorModifier = 88, RULE_constructorDeclarator = 89, 
-		RULE_simpleTypeName = 90, RULE_constructorBody = 91, RULE_explicitConstructorInvocation = 92, 
-		RULE_enumDeclaration = 93, RULE_enumBody = 94, RULE_enumConstantList = 95, 
-		RULE_enumConstant = 96, RULE_enumConstantModifier = 97, RULE_enumBodyDeclarations = 98, 
-		RULE_interfaceDeclaration = 99, RULE_normalInterfaceDeclaration = 100, 
-		RULE_interfaceModifier = 101, RULE_extendsInterfaces = 102, RULE_interfaceBody = 103, 
-		RULE_interfaceMemberDeclaration = 104, RULE_constantDeclaration = 105, 
-		RULE_constantModifier = 106, RULE_interfaceMethodDeclaration = 107, RULE_interfaceMethodModifier = 108, 
-		RULE_annotationTypeDeclaration = 109, RULE_annotationTypeBody = 110, RULE_annotationTypeMemberDeclaration = 111, 
-		RULE_annotationTypeElementDeclaration = 112, RULE_annotationTypeElementModifier = 113, 
-		RULE_defaultValue = 114, RULE_annotation = 115, RULE_normalAnnotation = 116, 
-		RULE_elementValuePairList = 117, RULE_elementValuePair = 118, RULE_elementValue = 119, 
-		RULE_elementValueArrayInitializer = 120, RULE_elementValueList = 121, 
-		RULE_markerAnnotation = 122, RULE_singleElementAnnotation = 123, RULE_arrayInitializer = 124, 
-		RULE_variableInitializerList = 125, RULE_block = 126, RULE_blockStatements = 127, 
-		RULE_blockStatement = 128, RULE_localVariableDeclarationStatement = 129, 
-		RULE_localVariableDeclaration = 130, RULE_statement = 131, RULE_statementNoShortIf = 132, 
-		RULE_statementWithoutTrailingSubstatement = 133, RULE_emptyStatement = 134, 
-		RULE_labeledStatement = 135, RULE_labeledStatementNoShortIf = 136, RULE_expressionStatement = 137, 
-		RULE_statementExpression = 138, RULE_ifThenStatement = 139, RULE_ifThenElseStatement = 140, 
-		RULE_ifThenElseStatementNoShortIf = 141, RULE_assertStatement = 142, RULE_switchStatement = 143, 
-		RULE_switchBlock = 144, RULE_switchBlockStatementGroup = 145, RULE_switchLabels = 146, 
-		RULE_switchLabel = 147, RULE_enumConstantName = 148, RULE_whileStatement = 149, 
-		RULE_whileStatementNoShortIf = 150, RULE_doStatement = 151, RULE_forStatement = 152, 
-		RULE_forStatementNoShortIf = 153, RULE_basicForStatement = 154, RULE_basicForStatementNoShortIf = 155, 
-		RULE_forInit = 156, RULE_forUpdate = 157, RULE_statementExpressionList = 158, 
-		RULE_enhancedForStatement = 159, RULE_enhancedForStatementNoShortIf = 160, 
-		RULE_breakStatement = 161, RULE_continueStatement = 162, RULE_returnStatement = 163, 
-		RULE_throwStatement = 164, RULE_synchronizedStatement = 165, RULE_tryStatement = 166, 
-		RULE_catches = 167, RULE_catchClause = 168, RULE_catchFormalParameter = 169, 
-		RULE_catchType = 170, RULE_finally_ = 171, RULE_tryWithResourcesStatement = 172, 
-		RULE_resourceSpecification = 173, RULE_resourceList = 174, RULE_resource = 175, 
-		RULE_primary = 176, RULE_primaryNoNewArray = 177, RULE_primaryNoNewArray_lf_arrayAccess = 178, 
-		RULE_primaryNoNewArray_lfno_arrayAccess = 179, RULE_primaryNoNewArray_lf_primary = 180, 
-		RULE_primaryNoNewArray_lf_primary_lf_arrayAccess_lf_primary = 181, RULE_primaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primary = 182, 
-		RULE_primaryNoNewArray_lfno_primary = 183, RULE_primaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primary = 184, 
-		RULE_primaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primary = 185, 
-		RULE_classInstanceCreationExpression = 186, RULE_classInstanceCreationExpression_lf_primary = 187, 
-		RULE_classInstanceCreationExpression_lfno_primary = 188, RULE_typeArgumentsOrDiamond = 189, 
-		RULE_fieldAccess = 190, RULE_fieldAccess_lf_primary = 191, RULE_fieldAccess_lfno_primary = 192, 
-		RULE_arrayAccess = 193, RULE_arrayAccess_lf_primary = 194, RULE_arrayAccess_lfno_primary = 195, 
-		RULE_methodInvocation = 196, RULE_methodInvocation_lf_primary = 197, RULE_methodInvocation_lfno_primary = 198, 
-		RULE_argumentList = 199, RULE_methodReference = 200, RULE_methodReference_lf_primary = 201, 
-		RULE_methodReference_lfno_primary = 202, RULE_arrayCreationExpression = 203, 
-		RULE_dimExprs = 204, RULE_dimExpr = 205, RULE_constantExpression = 206, 
-		RULE_expression = 207, RULE_lambdaExpression = 208, RULE_lambdaParameters = 209, 
-		RULE_inferredFormalParameterList = 210, RULE_lambdaBody = 211, RULE_assignmentExpression = 212, 
-		RULE_assignment = 213, RULE_leftHandSide = 214, RULE_assignmentOperator = 215, 
-		RULE_conditionalExpression = 216, RULE_conditionalOrExpression = 217, 
-		RULE_conditionalAndExpression = 218, RULE_inclusiveOrExpression = 219, 
-		RULE_exclusiveOrExpression = 220, RULE_andExpression = 221, RULE_equalityExpression = 222, 
-		RULE_relationalExpression = 223, RULE_shiftExpression = 224, RULE_additiveExpression = 225, 
-		RULE_multiplicativeExpression = 226, RULE_unaryExpression = 227, RULE_preIncrementExpression = 228, 
-		RULE_preDecrementExpression = 229, RULE_unaryExpressionNotPlusMinus = 230, 
-		RULE_postfixExpression = 231, RULE_postIncrementExpression = 232, RULE_postIncrementExpression_lf_postfixExpression = 233, 
-		RULE_postDecrementExpression = 234, RULE_postDecrementExpression_lf_postfixExpression = 235, 
+		RULE_literal = 0, RULE_type = 1, RULE_primitiveType = 2, RULE_numericType = 3,
+		RULE_integralType = 4, RULE_floatingPointType = 5, RULE_referenceType = 6,
+		RULE_classOrInterfaceType = 7, RULE_classType = 8, RULE_classType_lf_classOrInterfaceType = 9,
+		RULE_classType_lfno_classOrInterfaceType = 10, RULE_interfaceType = 11,
+		RULE_interfaceType_lf_classOrInterfaceType = 12, RULE_interfaceType_lfno_classOrInterfaceType = 13,
+		RULE_typeVariable = 14, RULE_arrayType = 15, RULE_dims = 16, RULE_typeParameter = 17,
+		RULE_typeParameterModifier = 18, RULE_typeBound = 19, RULE_additionalBound = 20,
+		RULE_typeArguments = 21, RULE_typeArgumentList = 22, RULE_typeArgument = 23,
+		RULE_wildcard = 24, RULE_wildcardBounds = 25, RULE_packageName = 26, RULE_typeName = 27,
+		RULE_packageOrTypeName = 28, RULE_expressionName = 29, RULE_methodName = 30,
+		RULE_ambiguousName = 31, RULE_compilationUnit = 32, RULE_packageDeclaration = 33,
+		RULE_packageModifier = 34, RULE_importDeclaration = 35, RULE_singleTypeImportDeclaration = 36,
+		RULE_typeImportOnDemandDeclaration = 37, RULE_singleStaticImportDeclaration = 38,
+		RULE_staticImportOnDemandDeclaration = 39, RULE_typeDeclaration = 40,
+		RULE_classDeclaration = 41, RULE_normalClassDeclaration = 42, RULE_classModifier = 43,
+		RULE_typeParameters = 44, RULE_typeParameterList = 45, RULE_superclass = 46,
+		RULE_superinterfaces = 47, RULE_interfaceTypeList = 48, RULE_classBody = 49,
+		RULE_classBodyDeclaration = 50, RULE_classMemberDeclaration = 51, RULE_fieldDeclaration = 52,
+		RULE_fieldModifier = 53, RULE_variableDeclaratorList = 54, RULE_variableDeclarator = 55,
+		RULE_variableDeclaratorId = 56, RULE_variableInitializer = 57, RULE_unannType = 58,
+		RULE_unannPrimitiveType = 59, RULE_unannReferenceType = 60, RULE_unannClassOrInterfaceType = 61,
+		RULE_unannClassType = 62, RULE_unannClassType_lf_unannClassOrInterfaceType = 63,
+		RULE_unannClassType_lfno_unannClassOrInterfaceType = 64, RULE_unannInterfaceType = 65,
+		RULE_unannInterfaceType_lf_unannClassOrInterfaceType = 66, RULE_unannInterfaceType_lfno_unannClassOrInterfaceType = 67,
+		RULE_unannTypeVariable = 68, RULE_unannArrayType = 69, RULE_methodDeclaration = 70,
+		RULE_methodModifier = 71, RULE_methodHeader = 72, RULE_result = 73, RULE_methodDeclarator = 74,
+		RULE_formalParameterList = 75, RULE_formalParameters = 76, RULE_formalParameter = 77,
+		RULE_variableModifier = 78, RULE_lastFormalParameter = 79, RULE_receiverParameter = 80,
+		RULE_throws_ = 81, RULE_exceptionTypeList = 82, RULE_exceptionType = 83,
+		RULE_methodBody = 84, RULE_instanceInitializer = 85, RULE_staticInitializer = 86,
+		RULE_constructorDeclaration = 87, RULE_constructorModifier = 88, RULE_constructorDeclarator = 89,
+		RULE_simpleTypeName = 90, RULE_constructorBody = 91, RULE_explicitConstructorInvocation = 92,
+		RULE_enumDeclaration = 93, RULE_enumBody = 94, RULE_enumConstantList = 95,
+		RULE_enumConstant = 96, RULE_enumConstantModifier = 97, RULE_enumBodyDeclarations = 98,
+		RULE_interfaceDeclaration = 99, RULE_normalInterfaceDeclaration = 100,
+		RULE_interfaceModifier = 101, RULE_extendsInterfaces = 102, RULE_interfaceBody = 103,
+		RULE_interfaceMemberDeclaration = 104, RULE_constantDeclaration = 105,
+		RULE_constantModifier = 106, RULE_interfaceMethodDeclaration = 107, RULE_interfaceMethodModifier = 108,
+		RULE_annotationTypeDeclaration = 109, RULE_annotationTypeBody = 110, RULE_annotationTypeMemberDeclaration = 111,
+		RULE_annotationTypeElementDeclaration = 112, RULE_annotationTypeElementModifier = 113,
+		RULE_defaultValue = 114, RULE_annotation = 115, RULE_normalAnnotation = 116,
+		RULE_elementValuePairList = 117, RULE_elementValuePair = 118, RULE_elementValue = 119,
+		RULE_elementValueArrayInitializer = 120, RULE_elementValueList = 121,
+		RULE_markerAnnotation = 122, RULE_singleElementAnnotation = 123, RULE_arrayInitializer = 124,
+		RULE_variableInitializerList = 125, RULE_block = 126, RULE_blockStatements = 127,
+		RULE_blockStatement = 128, RULE_localVariableDeclarationStatement = 129,
+		RULE_localVariableDeclaration = 130, RULE_statement = 131, RULE_statementNoShortIf = 132,
+		RULE_statementWithoutTrailingSubstatement = 133, RULE_emptyStatement = 134,
+		RULE_labeledStatement = 135, RULE_labeledStatementNoShortIf = 136, RULE_expressionStatement = 137,
+		RULE_statementExpression = 138, RULE_ifThenStatement = 139, RULE_ifThenElseStatement = 140,
+		RULE_ifThenElseStatementNoShortIf = 141, RULE_assertStatement = 142, RULE_switchStatement = 143,
+		RULE_switchBlock = 144, RULE_switchBlockStatementGroup = 145, RULE_switchLabels = 146,
+		RULE_switchLabel = 147, RULE_enumConstantName = 148, RULE_whileStatement = 149,
+		RULE_whileStatementNoShortIf = 150, RULE_doStatement = 151, RULE_forStatement = 152,
+		RULE_forStatementNoShortIf = 153, RULE_basicForStatement = 154, RULE_basicForStatementNoShortIf = 155,
+		RULE_forInit = 156, RULE_forUpdate = 157, RULE_statementExpressionList = 158,
+		RULE_enhancedForStatement = 159, RULE_enhancedForStatementNoShortIf = 160,
+		RULE_breakStatement = 161, RULE_continueStatement = 162, RULE_returnStatement = 163,
+		RULE_throwStatement = 164, RULE_synchronizedStatement = 165, RULE_tryStatement = 166,
+		RULE_catches = 167, RULE_catchClause = 168, RULE_catchFormalParameter = 169,
+		RULE_catchType = 170, RULE_finally_ = 171, RULE_tryWithResourcesStatement = 172,
+		RULE_resourceSpecification = 173, RULE_resourceList = 174, RULE_resource = 175,
+		RULE_primary = 176, RULE_primaryNoNewArray = 177, RULE_primaryNoNewArray_lf_arrayAccess = 178,
+		RULE_primaryNoNewArray_lfno_arrayAccess = 179, RULE_primaryNoNewArray_lf_primary = 180,
+		RULE_primaryNoNewArray_lf_primary_lf_arrayAccess_lf_primary = 181, RULE_primaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primary = 182,
+		RULE_primaryNoNewArray_lfno_primary = 183, RULE_primaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primary = 184,
+		RULE_primaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primary = 185,
+		RULE_classInstanceCreationExpression = 186, RULE_classInstanceCreationExpression_lf_primary = 187,
+		RULE_classInstanceCreationExpression_lfno_primary = 188, RULE_typeArgumentsOrDiamond = 189,
+		RULE_fieldAccess = 190, RULE_fieldAccess_lf_primary = 191, RULE_fieldAccess_lfno_primary = 192,
+		RULE_arrayAccess = 193, RULE_arrayAccess_lf_primary = 194, RULE_arrayAccess_lfno_primary = 195,
+		RULE_methodInvocation = 196, RULE_methodInvocation_lf_primary = 197, RULE_methodInvocation_lfno_primary = 198,
+		RULE_argumentList = 199, RULE_methodReference = 200, RULE_methodReference_lf_primary = 201,
+		RULE_methodReference_lfno_primary = 202, RULE_arrayCreationExpression = 203,
+		RULE_dimExprs = 204, RULE_dimExpr = 205, RULE_constantExpression = 206,
+		RULE_expression = 207, RULE_lambdaExpression = 208, RULE_lambdaParameters = 209,
+		RULE_inferredFormalParameterList = 210, RULE_lambdaBody = 211, RULE_assignmentExpression = 212,
+		RULE_assignment = 213, RULE_leftHandSide = 214, RULE_assignmentOperator = 215,
+		RULE_conditionalExpression = 216, RULE_conditionalOrExpression = 217,
+		RULE_conditionalAndExpression = 218, RULE_inclusiveOrExpression = 219,
+		RULE_exclusiveOrExpression = 220, RULE_andExpression = 221, RULE_equalityExpression = 222,
+		RULE_relationalExpression = 223, RULE_shiftExpression = 224, RULE_additiveExpression = 225,
+		RULE_multiplicativeExpression = 226, RULE_unaryExpression = 227, RULE_preIncrementExpression = 228,
+		RULE_preDecrementExpression = 229, RULE_unaryExpressionNotPlusMinus = 230,
+		RULE_postfixExpression = 231, RULE_postIncrementExpression = 232, RULE_postIncrementExpression_lf_postfixExpression = 233,
+		RULE_postDecrementExpression = 234, RULE_postDecrementExpression_lf_postfixExpression = 235,
 		RULE_castExpression = 236;
 	public static final String[] ruleNames = {
-		"literal", "type", "primitiveType", "numericType", "integralType", "floatingPointType", 
-		"referenceType", "classOrInterfaceType", "classType", "classType_lf_classOrInterfaceType", 
-		"classType_lfno_classOrInterfaceType", "interfaceType", "interfaceType_lf_classOrInterfaceType", 
-		"interfaceType_lfno_classOrInterfaceType", "typeVariable", "arrayType", 
-		"dims", "typeParameter", "typeParameterModifier", "typeBound", "additionalBound", 
-		"typeArguments", "typeArgumentList", "typeArgument", "wildcard", "wildcardBounds", 
-		"packageName", "typeName", "packageOrTypeName", "expressionName", "methodName", 
-		"ambiguousName", "compilationUnit", "packageDeclaration", "packageModifier", 
-		"importDeclaration", "singleTypeImportDeclaration", "typeImportOnDemandDeclaration", 
-		"singleStaticImportDeclaration", "staticImportOnDemandDeclaration", "typeDeclaration", 
-		"classDeclaration", "normalClassDeclaration", "classModifier", "typeParameters", 
-		"typeParameterList", "superclass", "superinterfaces", "interfaceTypeList", 
-		"classBody", "classBodyDeclaration", "classMemberDeclaration", "fieldDeclaration", 
-		"fieldModifier", "variableDeclaratorList", "variableDeclarator", "variableDeclaratorId", 
-		"variableInitializer", "unannType", "unannPrimitiveType", "unannReferenceType", 
-		"unannClassOrInterfaceType", "unannClassType", "unannClassType_lf_unannClassOrInterfaceType", 
-		"unannClassType_lfno_unannClassOrInterfaceType", "unannInterfaceType", 
-		"unannInterfaceType_lf_unannClassOrInterfaceType", "unannInterfaceType_lfno_unannClassOrInterfaceType", 
-		"unannTypeVariable", "unannArrayType", "methodDeclaration", "methodModifier", 
-		"methodHeader", "result", "methodDeclarator", "formalParameterList", "formalParameters", 
-		"formalParameter", "variableModifier", "lastFormalParameter", "receiverParameter", 
-		"throws_", "exceptionTypeList", "exceptionType", "methodBody", "instanceInitializer", 
-		"staticInitializer", "constructorDeclaration", "constructorModifier", 
-		"constructorDeclarator", "simpleTypeName", "constructorBody", "explicitConstructorInvocation", 
-		"enumDeclaration", "enumBody", "enumConstantList", "enumConstant", "enumConstantModifier", 
-		"enumBodyDeclarations", "interfaceDeclaration", "normalInterfaceDeclaration", 
-		"interfaceModifier", "extendsInterfaces", "interfaceBody", "interfaceMemberDeclaration", 
-		"constantDeclaration", "constantModifier", "interfaceMethodDeclaration", 
-		"interfaceMethodModifier", "annotationTypeDeclaration", "annotationTypeBody", 
-		"annotationTypeMemberDeclaration", "annotationTypeElementDeclaration", 
-		"annotationTypeElementModifier", "defaultValue", "annotation", "normalAnnotation", 
-		"elementValuePairList", "elementValuePair", "elementValue", "elementValueArrayInitializer", 
-		"elementValueList", "markerAnnotation", "singleElementAnnotation", "arrayInitializer", 
-		"variableInitializerList", "block", "blockStatements", "blockStatement", 
-		"localVariableDeclarationStatement", "localVariableDeclaration", "statement", 
-		"statementNoShortIf", "statementWithoutTrailingSubstatement", "emptyStatement", 
-		"labeledStatement", "labeledStatementNoShortIf", "expressionStatement", 
-		"statementExpression", "ifThenStatement", "ifThenElseStatement", "ifThenElseStatementNoShortIf", 
-		"assertStatement", "switchStatement", "switchBlock", "switchBlockStatementGroup", 
-		"switchLabels", "switchLabel", "enumConstantName", "whileStatement", "whileStatementNoShortIf", 
-		"doStatement", "forStatement", "forStatementNoShortIf", "basicForStatement", 
-		"basicForStatementNoShortIf", "forInit", "forUpdate", "statementExpressionList", 
-		"enhancedForStatement", "enhancedForStatementNoShortIf", "breakStatement", 
-		"continueStatement", "returnStatement", "throwStatement", "synchronizedStatement", 
-		"tryStatement", "catches", "catchClause", "catchFormalParameter", "catchType", 
-		"finally_", "tryWithResourcesStatement", "resourceSpecification", "resourceList", 
-		"resource", "primary", "primaryNoNewArray", "primaryNoNewArray_lf_arrayAccess", 
-		"primaryNoNewArray_lfno_arrayAccess", "primaryNoNewArray_lf_primary", 
-		"primaryNoNewArray_lf_primary_lf_arrayAccess_lf_primary", "primaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primary", 
-		"primaryNoNewArray_lfno_primary", "primaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primary", 
-		"primaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primary", "classInstanceCreationExpression", 
-		"classInstanceCreationExpression_lf_primary", "classInstanceCreationExpression_lfno_primary", 
-		"typeArgumentsOrDiamond", "fieldAccess", "fieldAccess_lf_primary", "fieldAccess_lfno_primary", 
-		"arrayAccess", "arrayAccess_lf_primary", "arrayAccess_lfno_primary", "methodInvocation", 
-		"methodInvocation_lf_primary", "methodInvocation_lfno_primary", "argumentList", 
-		"methodReference", "methodReference_lf_primary", "methodReference_lfno_primary", 
-		"arrayCreationExpression", "dimExprs", "dimExpr", "constantExpression", 
-		"expression", "lambdaExpression", "lambdaParameters", "inferredFormalParameterList", 
-		"lambdaBody", "assignmentExpression", "assignment", "leftHandSide", "assignmentOperator", 
-		"conditionalExpression", "conditionalOrExpression", "conditionalAndExpression", 
-		"inclusiveOrExpression", "exclusiveOrExpression", "andExpression", "equalityExpression", 
-		"relationalExpression", "shiftExpression", "additiveExpression", "multiplicativeExpression", 
-		"unaryExpression", "preIncrementExpression", "preDecrementExpression", 
-		"unaryExpressionNotPlusMinus", "postfixExpression", "postIncrementExpression", 
-		"postIncrementExpression_lf_postfixExpression", "postDecrementExpression", 
+		"literal", "type", "primitiveType", "numericType", "integralType", "floatingPointType",
+		"referenceType", "classOrInterfaceType", "classType", "classType_lf_classOrInterfaceType",
+		"classType_lfno_classOrInterfaceType", "interfaceType", "interfaceType_lf_classOrInterfaceType",
+		"interfaceType_lfno_classOrInterfaceType", "typeVariable", "arrayType",
+		"dims", "typeParameter", "typeParameterModifier", "typeBound", "additionalBound",
+		"typeArguments", "typeArgumentList", "typeArgument", "wildcard", "wildcardBounds",
+		"packageName", "typeName", "packageOrTypeName", "expressionName", "methodName",
+		"ambiguousName", "compilationUnit", "packageDeclaration", "packageModifier",
+		"importDeclaration", "singleTypeImportDeclaration", "typeImportOnDemandDeclaration",
+		"singleStaticImportDeclaration", "staticImportOnDemandDeclaration", "typeDeclaration",
+		"classDeclaration", "normalClassDeclaration", "classModifier", "typeParameters",
+		"typeParameterList", "superclass", "superinterfaces", "interfaceTypeList",
+		"classBody", "classBodyDeclaration", "classMemberDeclaration", "fieldDeclaration",
+		"fieldModifier", "variableDeclaratorList", "variableDeclarator", "variableDeclaratorId",
+		"variableInitializer", "unannType", "unannPrimitiveType", "unannReferenceType",
+		"unannClassOrInterfaceType", "unannClassType", "unannClassType_lf_unannClassOrInterfaceType",
+		"unannClassType_lfno_unannClassOrInterfaceType", "unannInterfaceType",
+		"unannInterfaceType_lf_unannClassOrInterfaceType", "unannInterfaceType_lfno_unannClassOrInterfaceType",
+		"unannTypeVariable", "unannArrayType", "methodDeclaration", "methodModifier",
+		"methodHeader", "result", "methodDeclarator", "formalParameterList", "formalParameters",
+		"formalParameter", "variableModifier", "lastFormalParameter", "receiverParameter",
+		"throws_", "exceptionTypeList", "exceptionType", "methodBody", "instanceInitializer",
+		"staticInitializer", "constructorDeclaration", "constructorModifier",
+		"constructorDeclarator", "simpleTypeName", "constructorBody", "explicitConstructorInvocation",
+		"enumDeclaration", "enumBody", "enumConstantList", "enumConstant", "enumConstantModifier",
+		"enumBodyDeclarations", "interfaceDeclaration", "normalInterfaceDeclaration",
+		"interfaceModifier", "extendsInterfaces", "interfaceBody", "interfaceMemberDeclaration",
+		"constantDeclaration", "constantModifier", "interfaceMethodDeclaration",
+		"interfaceMethodModifier", "annotationTypeDeclaration", "annotationTypeBody",
+		"annotationTypeMemberDeclaration", "annotationTypeElementDeclaration",
+		"annotationTypeElementModifier", "defaultValue", "annotation", "normalAnnotation",
+		"elementValuePairList", "elementValuePair", "elementValue", "elementValueArrayInitializer",
+		"elementValueList", "markerAnnotation", "singleElementAnnotation", "arrayInitializer",
+		"variableInitializerList", "block", "blockStatements", "blockStatement",
+		"localVariableDeclarationStatement", "localVariableDeclaration", "statement",
+		"statementNoShortIf", "statementWithoutTrailingSubstatement", "emptyStatement",
+		"labeledStatement", "labeledStatementNoShortIf", "expressionStatement",
+		"statementExpression", "ifThenStatement", "ifThenElseStatement", "ifThenElseStatementNoShortIf",
+		"assertStatement", "switchStatement", "switchBlock", "switchBlockStatementGroup",
+		"switchLabels", "switchLabel", "enumConstantName", "whileStatement", "whileStatementNoShortIf",
+		"doStatement", "forStatement", "forStatementNoShortIf", "basicForStatement",
+		"basicForStatementNoShortIf", "forInit", "forUpdate", "statementExpressionList",
+		"enhancedForStatement", "enhancedForStatementNoShortIf", "breakStatement",
+		"continueStatement", "returnStatement", "throwStatement", "synchronizedStatement",
+		"tryStatement", "catches", "catchClause", "catchFormalParameter", "catchType",
+		"finally_", "tryWithResourcesStatement", "resourceSpecification", "resourceList",
+		"resource", "primary", "primaryNoNewArray", "primaryNoNewArray_lf_arrayAccess",
+		"primaryNoNewArray_lfno_arrayAccess", "primaryNoNewArray_lf_primary",
+		"primaryNoNewArray_lf_primary_lf_arrayAccess_lf_primary", "primaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primary",
+		"primaryNoNewArray_lfno_primary", "primaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primary",
+		"primaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primary", "classInstanceCreationExpression",
+		"classInstanceCreationExpression_lf_primary", "classInstanceCreationExpression_lfno_primary",
+		"typeArgumentsOrDiamond", "fieldAccess", "fieldAccess_lf_primary", "fieldAccess_lfno_primary",
+		"arrayAccess", "arrayAccess_lf_primary", "arrayAccess_lfno_primary", "methodInvocation",
+		"methodInvocation_lf_primary", "methodInvocation_lfno_primary", "argumentList",
+		"methodReference", "methodReference_lf_primary", "methodReference_lfno_primary",
+		"arrayCreationExpression", "dimExprs", "dimExpr", "constantExpression",
+		"expression", "lambdaExpression", "lambdaParameters", "inferredFormalParameterList",
+		"lambdaBody", "assignmentExpression", "assignment", "leftHandSide", "assignmentOperator",
+		"conditionalExpression", "conditionalOrExpression", "conditionalAndExpression",
+		"inclusiveOrExpression", "exclusiveOrExpression", "andExpression", "equalityExpression",
+		"relationalExpression", "shiftExpression", "additiveExpression", "multiplicativeExpression",
+		"unaryExpression", "preIncrementExpression", "preDecrementExpression",
+		"unaryExpressionNotPlusMinus", "postfixExpression", "postIncrementExpression",
+		"postIncrementExpression_lf_postfixExpression", "postDecrementExpression",
 		"postDecrementExpression_lf_postfixExpression", "castExpression"
 	};
 
 	private static final String[] _LITERAL_NAMES = {
-		null, "'abstract'", "'assert'", "'boolean'", "'break'", "'byte'", "'case'", 
-		"'catch'", "'char'", "'class'", "'const'", "'continue'", "'default'", 
-		"'do'", "'double'", "'else'", "'enum'", "'extends'", "'final'", "'finally'", 
-		"'float'", "'for'", "'if'", "'goto'", "'implements'", "'import'", "'instanceof'", 
-		"'int'", "'interface'", "'long'", "'native'", "'new'", "'package'", "'private'", 
-		"'protected'", "'public'", "'return'", "'short'", "'static'", "'strictfp'", 
-		"'super'", "'switch'", "'synchronized'", "'this'", "'throw'", "'throws'", 
-		"'transient'", "'try'", "'void'", "'volatile'", "'while'", null, null, 
-		null, null, null, "'null'", "'('", "')'", "'{'", "'}'", "'['", "']'", 
-		"';'", "','", "'.'", "'='", "'>'", "'<'", "'!'", "'~'", "'?'", "':'", 
-		"'=='", "'<='", "'>='", "'!='", "'&&'", "'||'", "'++'", "'--'", "'+'", 
-		"'-'", "'*'", "'/'", "'&'", "'|'", "'^'", "'%'", "'->'", "'::'", "'+='", 
-		"'-='", "'*='", "'/='", "'&='", "'|='", "'^='", "'%='", "'<<='", "'>>='", 
+		null, "'abstract'", "'assert'", "'boolean'", "'break'", "'byte'", "'case'",
+		"'catch'", "'char'", "'class'", "'const'", "'continue'", "'default'",
+		"'do'", "'double'", "'else'", "'enum'", "'extends'", "'final'", "'finally'",
+		"'float'", "'for'", "'if'", "'goto'", "'implements'", "'import'", "'instanceof'",
+		"'int'", "'interface'", "'long'", "'native'", "'new'", "'package'", "'private'",
+		"'protected'", "'public'", "'return'", "'short'", "'static'", "'strictfp'",
+		"'super'", "'switch'", "'synchronized'", "'this'", "'throw'", "'throws'",
+		"'transient'", "'try'", "'void'", "'volatile'", "'while'", null, null,
+		null, null, null, "'null'", "'('", "')'", "'{'", "'}'", "'['", "']'",
+		"';'", "','", "'.'", "'='", "'>'", "'<'", "'!'", "'~'", "'?'", "':'",
+		"'=='", "'<='", "'>='", "'!='", "'&&'", "'||'", "'++'", "'--'", "'+'",
+		"'-'", "'*'", "'/'", "'&'", "'|'", "'^'", "'%'", "'->'", "'::'", "'+='",
+		"'-='", "'*='", "'/='", "'&='", "'|='", "'^='", "'%='", "'<<='", "'>>='",
 		"'>>>='", null, "'@'", "'...'"
 	};
 	private static final String[] _SYMBOLIC_NAMES = {
-		null, "ABSTRACT", "ASSERT", "BOOLEAN", "BREAK", "BYTE", "CASE", "CATCH", 
-		"CHAR", "CLASS", "CONST", "CONTINUE", "DEFAULT", "DO", "DOUBLE", "ELSE", 
-		"ENUM", "EXTENDS", "FINAL", "FINALLY", "FLOAT", "FOR", "IF", "GOTO", "IMPLEMENTS", 
-		"IMPORT", "INSTANCEOF", "INT", "INTERFACE", "LONG", "NATIVE", "NEW", "PACKAGE", 
-		"PRIVATE", "PROTECTED", "PUBLIC", "RETURN", "SHORT", "STATIC", "STRICTFP", 
-		"SUPER", "SWITCH", "SYNCHRONIZED", "THIS", "THROW", "THROWS", "TRANSIENT", 
-		"TRY", "VOID", "VOLATILE", "WHILE", "IntegerLiteral", "FloatingPointLiteral", 
-		"BooleanLiteral", "CharacterLiteral", "StringLiteral", "NullLiteral", 
-		"LPAREN", "RPAREN", "LBRACE", "RBRACE", "LBRACK", "RBRACK", "SEMI", "COMMA", 
-		"DOT", "ASSIGN", "GT", "LT", "BANG", "TILDE", "QUESTION", "COLON", "EQUAL", 
-		"LE", "GE", "NOTEQUAL", "AND", "OR", "INC", "DEC", "ADD", "SUB", "MUL", 
-		"DIV", "BITAND", "BITOR", "CARET", "MOD", "ARROW", "COLONCOLON", "ADD_ASSIGN", 
-		"SUB_ASSIGN", "MUL_ASSIGN", "DIV_ASSIGN", "AND_ASSIGN", "OR_ASSIGN", "XOR_ASSIGN", 
-		"MOD_ASSIGN", "LSHIFT_ASSIGN", "RSHIFT_ASSIGN", "URSHIFT_ASSIGN", "Identifier", 
+		null, "ABSTRACT", "ASSERT", "BOOLEAN", "BREAK", "BYTE", "CASE", "CATCH",
+		"CHAR", "CLASS", "CONST", "CONTINUE", "DEFAULT", "DO", "DOUBLE", "ELSE",
+		"ENUM", "EXTENDS", "FINAL", "FINALLY", "FLOAT", "FOR", "IF", "GOTO", "IMPLEMENTS",
+		"IMPORT", "INSTANCEOF", "INT", "INTERFACE", "LONG", "NATIVE", "NEW", "PACKAGE",
+		"PRIVATE", "PROTECTED", "PUBLIC", "RETURN", "SHORT", "STATIC", "STRICTFP",
+		"SUPER", "SWITCH", "SYNCHRONIZED", "THIS", "THROW", "THROWS", "TRANSIENT",
+		"TRY", "VOID", "VOLATILE", "WHILE", "IntegerLiteral", "FloatingPointLiteral",
+		"BooleanLiteral", "CharacterLiteral", "StringLiteral", "NullLiteral",
+		"LPAREN", "RPAREN", "LBRACE", "RBRACE", "LBRACK", "RBRACK", "SEMI", "COMMA",
+		"DOT", "ASSIGN", "GT", "LT", "BANG", "TILDE", "QUESTION", "COLON", "EQUAL",
+		"LE", "GE", "NOTEQUAL", "AND", "OR", "INC", "DEC", "ADD", "SUB", "MUL",
+		"DIV", "BITAND", "BITOR", "CARET", "MOD", "ARROW", "COLONCOLON", "ADD_ASSIGN",
+		"SUB_ASSIGN", "MUL_ASSIGN", "DIV_ASSIGN", "AND_ASSIGN", "OR_ASSIGN", "XOR_ASSIGN",
+		"MOD_ASSIGN", "LSHIFT_ASSIGN", "RSHIFT_ASSIGN", "URSHIFT_ASSIGN", "Identifier",
 		"AT", "ELLIPSIS", "WS", "COMMENT", "LINE_COMMENT"
 	};
 	public static final Vocabulary VOCABULARY = new VocabularyImpl(_LITERAL_NAMES, _SYMBOLIC_NAMES);
@@ -251,13 +251,12 @@ public class Java8Parser extends Parser {
 	}
 
 	@Override
-
 	public Vocabulary getVocabulary() {
 		return VOCABULARY;
 	}
 
 	@Override
-	public String getGrammarFileName() { return "Java8.g4"; }
+	public String getGrammarFileName() { return "com/pinko/Java8.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }
@@ -268,28 +267,28 @@ public class Java8Parser extends Parser {
 	@Override
 	public ATN getATN() { return _ATN; }
 
-	public Java8Parser(TokenStream input) {
+	public JavaInterfaceParser(TokenStream input) {
 		super(input);
 		_interp = new ParserATNSimulator(this,_ATN,_decisionToDFA,_sharedContextCache);
 	}
 	public static class LiteralContext extends ParserRuleContext {
-		public TerminalNode IntegerLiteral() { return getToken(Java8Parser.IntegerLiteral, 0); }
-		public TerminalNode FloatingPointLiteral() { return getToken(Java8Parser.FloatingPointLiteral, 0); }
-		public TerminalNode BooleanLiteral() { return getToken(Java8Parser.BooleanLiteral, 0); }
-		public TerminalNode CharacterLiteral() { return getToken(Java8Parser.CharacterLiteral, 0); }
-		public TerminalNode StringLiteral() { return getToken(Java8Parser.StringLiteral, 0); }
-		public TerminalNode NullLiteral() { return getToken(Java8Parser.NullLiteral, 0); }
+		public TerminalNode IntegerLiteral() { return getToken(JavaInterfaceParser.IntegerLiteral, 0); }
+		public TerminalNode FloatingPointLiteral() { return getToken(JavaInterfaceParser.FloatingPointLiteral, 0); }
+		public TerminalNode BooleanLiteral() { return getToken(JavaInterfaceParser.BooleanLiteral, 0); }
+		public TerminalNode CharacterLiteral() { return getToken(JavaInterfaceParser.CharacterLiteral, 0); }
+		public TerminalNode StringLiteral() { return getToken(JavaInterfaceParser.StringLiteral, 0); }
+		public TerminalNode NullLiteral() { return getToken(JavaInterfaceParser.NullLiteral, 0); }
 		public LiteralContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_literal; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterLiteral(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterLiteral(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitLiteral(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitLiteral(this);
 		}
 	}
 
@@ -333,11 +332,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_type; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitType(this);
 		}
 	}
 
@@ -390,11 +389,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_primitiveType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterPrimitiveType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterPrimitiveType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitPrimitiveType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitPrimitiveType(this);
 		}
 	}
 
@@ -473,11 +472,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_numericType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterNumericType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterNumericType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitNumericType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitNumericType(this);
 		}
 	}
 
@@ -528,11 +527,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_integralType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterIntegralType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterIntegralType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitIntegralType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitIntegralType(this);
 		}
 	}
 
@@ -570,11 +569,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_floatingPointType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterFloatingPointType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterFloatingPointType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitFloatingPointType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitFloatingPointType(this);
 		}
 	}
 
@@ -621,11 +620,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_referenceType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterReferenceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterReferenceType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitReferenceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitReferenceType(this);
 		}
 	}
 
@@ -694,11 +693,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_classOrInterfaceType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterClassOrInterfaceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterClassOrInterfaceType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitClassOrInterfaceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitClassOrInterfaceType(this);
 		}
 	}
 
@@ -727,7 +726,7 @@ public class Java8Parser extends Parser {
 			setState(517);
 			_errHandler.sync(this);
 			_alt = getInterpreter().adaptivePredict(_input,8,_ctx);
-			while ( _alt!=2 && _alt!=org.antlr.v4.runtime.atn.ATN.INVALID_ALT_NUMBER ) {
+			while ( _alt!=2 && _alt!=ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					setState(515);
@@ -765,7 +764,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class ClassTypeContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public List<AnnotationContext> annotation() {
 			return getRuleContexts(AnnotationContext.class);
 		}
@@ -784,11 +783,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_classType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterClassType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterClassType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitClassType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitClassType(this);
 		}
 	}
 
@@ -877,7 +876,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class ClassType_lf_classOrInterfaceTypeContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public List<AnnotationContext> annotation() {
 			return getRuleContexts(AnnotationContext.class);
 		}
@@ -893,11 +892,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_classType_lf_classOrInterfaceType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterClassType_lf_classOrInterfaceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterClassType_lf_classOrInterfaceType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitClassType_lf_classOrInterfaceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitClassType_lf_classOrInterfaceType(this);
 		}
 	}
 
@@ -949,7 +948,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class ClassType_lfno_classOrInterfaceTypeContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public List<AnnotationContext> annotation() {
 			return getRuleContexts(AnnotationContext.class);
 		}
@@ -965,11 +964,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_classType_lfno_classOrInterfaceType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterClassType_lfno_classOrInterfaceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterClassType_lfno_classOrInterfaceType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitClassType_lfno_classOrInterfaceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitClassType_lfno_classOrInterfaceType(this);
 		}
 	}
 
@@ -1028,11 +1027,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_interfaceType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterInterfaceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterInterfaceType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitInterfaceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitInterfaceType(this);
 		}
 	}
 
@@ -1067,11 +1066,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_interfaceType_lf_classOrInterfaceType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterInterfaceType_lf_classOrInterfaceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterInterfaceType_lf_classOrInterfaceType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitInterfaceType_lf_classOrInterfaceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitInterfaceType_lf_classOrInterfaceType(this);
 		}
 	}
 
@@ -1106,11 +1105,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_interfaceType_lfno_classOrInterfaceType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterInterfaceType_lfno_classOrInterfaceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterInterfaceType_lfno_classOrInterfaceType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitInterfaceType_lfno_classOrInterfaceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitInterfaceType_lfno_classOrInterfaceType(this);
 		}
 	}
 
@@ -1136,7 +1135,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class TypeVariableContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public List<AnnotationContext> annotation() {
 			return getRuleContexts(AnnotationContext.class);
 		}
@@ -1149,11 +1148,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_typeVariable; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterTypeVariable(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterTypeVariable(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitTypeVariable(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitTypeVariable(this);
 		}
 	}
 
@@ -1212,11 +1211,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_arrayType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterArrayType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterArrayType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitArrayType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitArrayType(this);
 		}
 	}
 
@@ -1279,11 +1278,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_dims; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterDims(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterDims(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitDims(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitDims(this);
 		}
 	}
 
@@ -1359,7 +1358,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class TypeParameterContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public List<TypeParameterModifierContext> typeParameterModifier() {
 			return getRuleContexts(TypeParameterModifierContext.class);
 		}
@@ -1375,11 +1374,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_typeParameter; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterTypeParameter(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterTypeParameter(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitTypeParameter(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitTypeParameter(this);
 		}
 	}
 
@@ -1438,11 +1437,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_typeParameterModifier; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterTypeParameterModifier(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterTypeParameterModifier(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitTypeParameterModifier(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitTypeParameterModifier(this);
 		}
 	}
 
@@ -1486,11 +1485,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_typeBound; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterTypeBound(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterTypeBound(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitTypeBound(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitTypeBound(this);
 		}
 	}
 
@@ -1556,11 +1555,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_additionalBound; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterAdditionalBound(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterAdditionalBound(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitAdditionalBound(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitAdditionalBound(this);
 		}
 	}
 
@@ -1597,11 +1596,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_typeArguments; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterTypeArguments(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterTypeArguments(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitTypeArguments(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitTypeArguments(this);
 		}
 	}
 
@@ -1643,11 +1642,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_typeArgumentList; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterTypeArgumentList(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterTypeArgumentList(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitTypeArgumentList(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitTypeArgumentList(this);
 		}
 	}
 
@@ -1702,11 +1701,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_typeArgument; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterTypeArgument(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterTypeArgument(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitTypeArgument(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitTypeArgument(this);
 		}
 	}
 
@@ -1759,11 +1758,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_wildcard; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterWildcard(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterWildcard(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitWildcard(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitWildcard(this);
 		}
 	}
 
@@ -1822,11 +1821,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_wildcardBounds; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterWildcardBounds(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterWildcardBounds(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitWildcardBounds(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitWildcardBounds(this);
 		}
 	}
 
@@ -1870,7 +1869,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class PackageNameContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public PackageNameContext packageName() {
 			return getRuleContext(PackageNameContext.class,0);
 		}
@@ -1880,11 +1879,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_packageName; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterPackageName(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterPackageName(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitPackageName(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitPackageName(this);
 		}
 	}
 
@@ -1946,7 +1945,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class TypeNameContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public PackageOrTypeNameContext packageOrTypeName() {
 			return getRuleContext(PackageOrTypeNameContext.class,0);
 		}
@@ -1956,11 +1955,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_typeName; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterTypeName(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterTypeName(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitTypeName(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitTypeName(this);
 		}
 	}
 
@@ -2002,7 +2001,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class PackageOrTypeNameContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public PackageOrTypeNameContext packageOrTypeName() {
 			return getRuleContext(PackageOrTypeNameContext.class,0);
 		}
@@ -2012,11 +2011,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_packageOrTypeName; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterPackageOrTypeName(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterPackageOrTypeName(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitPackageOrTypeName(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitPackageOrTypeName(this);
 		}
 	}
 
@@ -2078,7 +2077,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class ExpressionNameContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public AmbiguousNameContext ambiguousName() {
 			return getRuleContext(AmbiguousNameContext.class,0);
 		}
@@ -2088,11 +2087,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_expressionName; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterExpressionName(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterExpressionName(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitExpressionName(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitExpressionName(this);
 		}
 	}
 
@@ -2134,18 +2133,18 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class MethodNameContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public MethodNameContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_methodName; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterMethodName(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterMethodName(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitMethodName(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitMethodName(this);
 		}
 	}
 
@@ -2171,7 +2170,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class AmbiguousNameContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public AmbiguousNameContext ambiguousName() {
 			return getRuleContext(AmbiguousNameContext.class,0);
 		}
@@ -2181,11 +2180,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_ambiguousName; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterAmbiguousName(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterAmbiguousName(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitAmbiguousName(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitAmbiguousName(this);
 		}
 	}
 
@@ -2247,7 +2246,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class CompilationUnitContext extends ParserRuleContext {
-		public TerminalNode EOF() { return getToken(Java8Parser.EOF, 0); }
+		public TerminalNode EOF() { return getToken(JavaInterfaceParser.EOF, 0); }
 		public PackageDeclarationContext packageDeclaration() {
 			return getRuleContext(PackageDeclarationContext.class,0);
 		}
@@ -2269,11 +2268,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_compilationUnit; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterCompilationUnit(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterCompilationUnit(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitCompilationUnit(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitCompilationUnit(this);
 		}
 	}
 
@@ -2337,9 +2336,9 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class PackageDeclarationContext extends ParserRuleContext {
-		public List<TerminalNode> Identifier() { return getTokens(Java8Parser.Identifier); }
+		public List<TerminalNode> Identifier() { return getTokens(JavaInterfaceParser.Identifier); }
 		public TerminalNode Identifier(int i) {
-			return getToken(Java8Parser.Identifier, i);
+			return getToken(JavaInterfaceParser.Identifier, i);
 		}
 		public List<PackageModifierContext> packageModifier() {
 			return getRuleContexts(PackageModifierContext.class);
@@ -2353,11 +2352,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_packageDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterPackageDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterPackageDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitPackageDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitPackageDeclaration(this);
 		}
 	}
 
@@ -2427,11 +2426,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_packageModifier; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterPackageModifier(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterPackageModifier(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitPackageModifier(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitPackageModifier(this);
 		}
 	}
 
@@ -2475,11 +2474,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_importDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterImportDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterImportDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitImportDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitImportDeclaration(this);
 		}
 	}
 
@@ -2540,11 +2539,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_singleTypeImportDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterSingleTypeImportDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterSingleTypeImportDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitSingleTypeImportDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitSingleTypeImportDeclaration(this);
 		}
 	}
 
@@ -2583,11 +2582,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_typeImportOnDemandDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterTypeImportOnDemandDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterTypeImportOnDemandDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitTypeImportOnDemandDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitTypeImportOnDemandDeclaration(this);
 		}
 	}
 
@@ -2624,18 +2623,18 @@ public class Java8Parser extends Parser {
 		public TypeNameContext typeName() {
 			return getRuleContext(TypeNameContext.class,0);
 		}
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public SingleStaticImportDeclarationContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_singleStaticImportDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterSingleStaticImportDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterSingleStaticImportDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitSingleStaticImportDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitSingleStaticImportDeclaration(this);
 		}
 	}
 
@@ -2680,11 +2679,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_staticImportOnDemandDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterStaticImportOnDemandDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterStaticImportOnDemandDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitStaticImportOnDemandDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitStaticImportOnDemandDeclaration(this);
 		}
 	}
 
@@ -2732,11 +2731,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_typeDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterTypeDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterTypeDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitTypeDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitTypeDeclaration(this);
 		}
 	}
 
@@ -2793,11 +2792,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_classDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterClassDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterClassDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitClassDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitClassDeclaration(this);
 		}
 	}
 
@@ -2835,7 +2834,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class NormalClassDeclarationContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public ClassBodyContext classBody() {
 			return getRuleContext(ClassBodyContext.class,0);
 		}
@@ -2860,11 +2859,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_normalClassDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterNormalClassDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterNormalClassDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitNormalClassDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitNormalClassDeclaration(this);
 		}
 	}
 
@@ -2945,11 +2944,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_classModifier; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterClassModifier(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterClassModifier(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitClassModifier(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitClassModifier(this);
 		}
 	}
 
@@ -3040,11 +3039,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_typeParameters; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterTypeParameters(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterTypeParameters(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitTypeParameters(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitTypeParameters(this);
 		}
 	}
 
@@ -3086,11 +3085,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_typeParameterList; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterTypeParameterList(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterTypeParameterList(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitTypeParameterList(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitTypeParameterList(this);
 		}
 	}
 
@@ -3142,11 +3141,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_superclass; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterSuperclass(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterSuperclass(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitSuperclass(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitSuperclass(this);
 		}
 	}
 
@@ -3183,11 +3182,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_superinterfaces; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterSuperinterfaces(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterSuperinterfaces(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitSuperinterfaces(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitSuperinterfaces(this);
 		}
 	}
 
@@ -3227,11 +3226,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_interfaceTypeList; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterInterfaceTypeList(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterInterfaceTypeList(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitInterfaceTypeList(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitInterfaceTypeList(this);
 		}
 	}
 
@@ -3286,11 +3285,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_classBody; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterClassBody(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterClassBody(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitClassBody(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitClassBody(this);
 		}
 	}
 
@@ -3351,11 +3350,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_classBodyDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterClassBodyDeclaration(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterClassBodyDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitClassBodyDeclaration(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitClassBodyDeclaration(this);
 		}
 	}
 
@@ -3425,11 +3424,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_classMemberDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterClassMemberDeclaration(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterClassMemberDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitClassMemberDeclaration(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitClassMemberDeclaration(this);
 		}
 	}
 
@@ -3506,11 +3505,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_fieldDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterFieldDeclaration(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterFieldDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitFieldDeclaration(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitFieldDeclaration(this);
 		}
 	}
 
@@ -3564,11 +3563,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_fieldModifier; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterFieldModifier(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterFieldModifier(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitFieldModifier(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitFieldModifier(this);
 		}
 	}
 
@@ -3662,11 +3661,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_variableDeclaratorList; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterVariableDeclaratorList(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterVariableDeclaratorList(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitVariableDeclaratorList(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitVariableDeclaratorList(this);
 		}
 	}
 
@@ -3721,11 +3720,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_variableDeclarator; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterVariableDeclarator(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterVariableDeclarator(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitVariableDeclarator(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitVariableDeclarator(this);
 		}
 	}
 
@@ -3763,7 +3762,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class VariableDeclaratorIdContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public DimsContext dims() {
 			return getRuleContext(DimsContext.class,0);
 		}
@@ -3773,11 +3772,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_variableDeclaratorId; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterVariableDeclaratorId(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterVariableDeclaratorId(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitVariableDeclaratorId(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitVariableDeclaratorId(this);
 		}
 	}
 
@@ -3825,11 +3824,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_variableInitializer; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterVariableInitializer(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterVariableInitializer(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitVariableInitializer(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitVariableInitializer(this);
 		}
 	}
 
@@ -3907,11 +3906,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_unannType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterUnannType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterUnannType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitUnannType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitUnannType(this);
 		}
 	}
 
@@ -3958,11 +3957,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_unannPrimitiveType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterUnannPrimitiveType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterUnannPrimitiveType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitUnannPrimitiveType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitUnannPrimitiveType(this);
 		}
 	}
 
@@ -4023,11 +4022,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_unannReferenceType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterUnannReferenceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterUnannReferenceType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitUnannReferenceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitUnannReferenceType(this);
 		}
 	}
 
@@ -4096,11 +4095,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_unannClassOrInterfaceType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterUnannClassOrInterfaceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterUnannClassOrInterfaceType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitUnannClassOrInterfaceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitUnannClassOrInterfaceType(this);
 		}
 	}
 
@@ -4167,7 +4166,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class UnannClassTypeContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public TypeArgumentsContext typeArguments() {
 			return getRuleContext(TypeArgumentsContext.class,0);
 		}
@@ -4186,11 +4185,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_unannClassType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterUnannClassType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterUnannClassType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitUnannClassType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitUnannClassType(this);
 		}
 	}
 
@@ -4265,7 +4264,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class UnannClassType_lf_unannClassOrInterfaceTypeContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public List<AnnotationContext> annotation() {
 			return getRuleContexts(AnnotationContext.class);
 		}
@@ -4281,11 +4280,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_unannClassType_lf_unannClassOrInterfaceType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterUnannClassType_lf_unannClassOrInterfaceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterUnannClassType_lf_unannClassOrInterfaceType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitUnannClassType_lf_unannClassOrInterfaceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitUnannClassType_lf_unannClassOrInterfaceType(this);
 		}
 	}
 
@@ -4337,7 +4336,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class UnannClassType_lfno_unannClassOrInterfaceTypeContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public TypeArgumentsContext typeArguments() {
 			return getRuleContext(TypeArgumentsContext.class,0);
 		}
@@ -4347,11 +4346,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_unannClassType_lfno_unannClassOrInterfaceType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterUnannClassType_lfno_unannClassOrInterfaceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterUnannClassType_lfno_unannClassOrInterfaceType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitUnannClassType_lfno_unannClassOrInterfaceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitUnannClassType_lfno_unannClassOrInterfaceType(this);
 		}
 	}
 
@@ -4396,11 +4395,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_unannInterfaceType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterUnannInterfaceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterUnannInterfaceType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitUnannInterfaceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitUnannInterfaceType(this);
 		}
 	}
 
@@ -4435,11 +4434,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_unannInterfaceType_lf_unannClassOrInterfaceType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterUnannInterfaceType_lf_unannClassOrInterfaceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterUnannInterfaceType_lf_unannClassOrInterfaceType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitUnannInterfaceType_lf_unannClassOrInterfaceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitUnannInterfaceType_lf_unannClassOrInterfaceType(this);
 		}
 	}
 
@@ -4474,11 +4473,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_unannInterfaceType_lfno_unannClassOrInterfaceType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterUnannInterfaceType_lfno_unannClassOrInterfaceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterUnannInterfaceType_lfno_unannClassOrInterfaceType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitUnannInterfaceType_lfno_unannClassOrInterfaceType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitUnannInterfaceType_lfno_unannClassOrInterfaceType(this);
 		}
 	}
 
@@ -4504,18 +4503,18 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class UnannTypeVariableContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public UnannTypeVariableContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_unannTypeVariable; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterUnannTypeVariable(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterUnannTypeVariable(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitUnannTypeVariable(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitUnannTypeVariable(this);
 		}
 	}
 
@@ -4559,11 +4558,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_unannArrayType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterUnannArrayType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterUnannArrayType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitUnannArrayType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitUnannArrayType(this);
 		}
 	}
 
@@ -4632,11 +4631,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_methodDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterMethodDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterMethodDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitMethodDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitMethodDeclaration(this);
 		}
 	}
 
@@ -4688,11 +4687,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_methodModifier; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterMethodModifier(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterMethodModifier(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitMethodModifier(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitMethodModifier(this);
 		}
 	}
 
@@ -4812,11 +4811,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_methodHeader; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterMethodHeader(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterMethodHeader(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitMethodHeader(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitMethodHeader(this);
 		}
 	}
 
@@ -4913,11 +4912,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_result; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterResult(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterResult(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitResult(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitResult(this);
 		}
 	}
 
@@ -4965,7 +4964,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class MethodDeclaratorContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public FormalParameterListContext formalParameterList() {
 			return getRuleContext(FormalParameterListContext.class,0);
 		}
@@ -4978,11 +4977,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_methodDeclarator; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterMethodDeclarator(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterMethodDeclarator(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitMethodDeclarator(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitMethodDeclarator(this);
 		}
 	}
 
@@ -5043,11 +5042,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_formalParameterList; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterFormalParameterList(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterFormalParameterList(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitFormalParameterList(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitFormalParameterList(this);
 		}
 	}
 
@@ -5104,11 +5103,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_formalParameters; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterFormalParameters(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterFormalParameters(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitFormalParameters(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitFormalParameters(this);
 		}
 	}
 
@@ -5201,11 +5200,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_formalParameter; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterFormalParameter(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterFormalParameter(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitFormalParameter(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitFormalParameter(this);
 		}
 	}
 
@@ -5257,11 +5256,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_variableModifier; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterVariableModifier(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterVariableModifier(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitVariableModifier(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitVariableModifier(this);
 		}
 	}
 
@@ -5328,11 +5327,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_lastFormalParameter; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterLastFormalParameter(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterLastFormalParameter(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitLastFormalParameter(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitLastFormalParameter(this);
 		}
 	}
 
@@ -5412,18 +5411,18 @@ public class Java8Parser extends Parser {
 		public AnnotationContext annotation(int i) {
 			return getRuleContext(AnnotationContext.class,i);
 		}
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public ReceiverParameterContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_receiverParameter; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterReceiverParameter(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterReceiverParameter(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitReceiverParameter(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitReceiverParameter(this);
 		}
 	}
 
@@ -5486,11 +5485,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_throws_; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterThrows_(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterThrows_(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitThrows_(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitThrows_(this);
 		}
 	}
 
@@ -5530,11 +5529,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_exceptionTypeList; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterExceptionTypeList(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterExceptionTypeList(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitExceptionTypeList(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitExceptionTypeList(this);
 		}
 	}
 
@@ -5589,11 +5588,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_exceptionType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterExceptionType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterExceptionType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitExceptionType(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitExceptionType(this);
 		}
 	}
 
@@ -5640,11 +5639,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_methodBody; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterMethodBody(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterMethodBody(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitMethodBody(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitMethodBody(this);
 		}
 	}
 
@@ -5693,11 +5692,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_instanceInitializer; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterInstanceInitializer(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterInstanceInitializer(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitInstanceInitializer(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitInstanceInitializer(this);
 		}
 	}
 
@@ -5732,11 +5731,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_staticInitializer; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterStaticInitializer(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterStaticInitializer(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitStaticInitializer(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitStaticInitializer(this);
 		}
 	}
 
@@ -5785,11 +5784,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_constructorDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterConstructorDeclaration(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterConstructorDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitConstructorDeclaration(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitConstructorDeclaration(this);
 		}
 	}
 
@@ -5850,11 +5849,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_constructorModifier; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterConstructorModifier(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterConstructorModifier(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitConstructorModifier(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitConstructorModifier(this);
 		}
 	}
 
@@ -5923,11 +5922,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_constructorDeclarator; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterConstructorDeclarator(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterConstructorDeclarator(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitConstructorDeclarator(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitConstructorDeclarator(this);
 		}
 	}
 
@@ -5976,18 +5975,18 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class SimpleTypeNameContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public SimpleTypeNameContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_simpleTypeName; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterSimpleTypeName(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterSimpleTypeName(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitSimpleTypeName(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitSimpleTypeName(this);
 		}
 	}
 
@@ -6025,11 +6024,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_constructorBody; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterConstructorBody(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterConstructorBody(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitConstructorBody(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitConstructorBody(this);
 		}
 	}
 
@@ -6094,11 +6093,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_explicitConstructorInvocation; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterExplicitConstructorInvocation(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterExplicitConstructorInvocation(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitExplicitConstructorInvocation(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitExplicitConstructorInvocation(this);
 		}
 	}
 
@@ -6255,7 +6254,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class EnumDeclarationContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public EnumBodyContext enumBody() {
 			return getRuleContext(EnumBodyContext.class,0);
 		}
@@ -6274,11 +6273,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_enumDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterEnumDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterEnumDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitEnumDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitEnumDeclaration(this);
 		}
 	}
 
@@ -6344,11 +6343,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_enumBody; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterEnumBody(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterEnumBody(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitEnumBody(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitEnumBody(this);
 		}
 	}
 
@@ -6416,11 +6415,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_enumConstantList; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterEnumConstantList(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterEnumConstantList(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitEnumConstantList(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitEnumConstantList(this);
 		}
 	}
 
@@ -6465,7 +6464,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class EnumConstantContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public List<EnumConstantModifierContext> enumConstantModifier() {
 			return getRuleContexts(EnumConstantModifierContext.class);
 		}
@@ -6484,11 +6483,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_enumConstant; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterEnumConstant(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterEnumConstant(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitEnumConstant(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitEnumConstant(this);
 		}
 	}
 
@@ -6567,11 +6566,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_enumConstantModifier; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterEnumConstantModifier(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterEnumConstantModifier(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitEnumConstantModifier(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitEnumConstantModifier(this);
 		}
 	}
 
@@ -6609,11 +6608,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_enumBodyDeclarations; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterEnumBodyDeclarations(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterEnumBodyDeclarations(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitEnumBodyDeclarations(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitEnumBodyDeclarations(this);
 		}
 	}
 
@@ -6666,11 +6665,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_interfaceDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterInterfaceDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterInterfaceDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitInterfaceDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitInterfaceDeclaration(this);
 		}
 	}
 
@@ -6708,7 +6707,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class NormalInterfaceDeclarationContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public InterfaceBodyContext interfaceBody() {
 			return getRuleContext(InterfaceBodyContext.class,0);
 		}
@@ -6730,11 +6729,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_normalInterfaceDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterNormalInterfaceDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterNormalInterfaceDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitNormalInterfaceDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitNormalInterfaceDeclaration(this);
 		}
 	}
 
@@ -6806,11 +6805,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_interfaceModifier; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterInterfaceModifier(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterInterfaceModifier(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitInterfaceModifier(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitInterfaceModifier(this);
 		}
 	}
 
@@ -6894,11 +6893,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_extendsInterfaces; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterExtendsInterfaces(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterExtendsInterfaces(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitExtendsInterfaces(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitExtendsInterfaces(this);
 		}
 	}
 
@@ -6938,11 +6937,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_interfaceBody; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterInterfaceBody(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterInterfaceBody(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitInterfaceBody(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitInterfaceBody(this);
 		}
 	}
 
@@ -7003,11 +7002,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_interfaceMemberDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterInterfaceMemberDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterInterfaceMemberDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitInterfaceMemberDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitInterfaceMemberDeclaration(this);
 		}
 	}
 
@@ -7084,11 +7083,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_constantDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterConstantDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterConstantDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitConstantDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitConstantDeclaration(this);
 		}
 	}
 
@@ -7142,11 +7141,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_constantModifier; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterConstantModifier(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterConstantModifier(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitConstantModifier(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitConstantModifier(this);
 		}
 	}
 
@@ -7218,11 +7217,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_interfaceMethodDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterInterfaceMethodDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterInterfaceMethodDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitInterfaceMethodDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitInterfaceMethodDeclaration(this);
 		}
 	}
 
@@ -7274,11 +7273,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_interfaceMethodModifier; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterInterfaceMethodModifier(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterInterfaceMethodModifier(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitInterfaceMethodModifier(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitInterfaceMethodModifier(this);
 		}
 	}
 
@@ -7346,7 +7345,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class AnnotationTypeDeclarationContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public AnnotationTypeBodyContext annotationTypeBody() {
 			return getRuleContext(AnnotationTypeBodyContext.class,0);
 		}
@@ -7362,11 +7361,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_annotationTypeDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterAnnotationTypeDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterAnnotationTypeDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitAnnotationTypeDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitAnnotationTypeDeclaration(this);
 		}
 	}
 
@@ -7427,11 +7426,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_annotationTypeBody; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterAnnotationTypeBody(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterAnnotationTypeBody(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitAnnotationTypeBody(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitAnnotationTypeBody(this);
 		}
 	}
 
@@ -7492,11 +7491,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_annotationTypeMemberDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterAnnotationTypeMemberDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterAnnotationTypeMemberDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitAnnotationTypeMemberDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitAnnotationTypeMemberDeclaration(this);
 		}
 	}
 
@@ -7558,7 +7557,7 @@ public class Java8Parser extends Parser {
 		public UnannTypeContext unannType() {
 			return getRuleContext(UnannTypeContext.class,0);
 		}
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public List<AnnotationTypeElementModifierContext> annotationTypeElementModifier() {
 			return getRuleContexts(AnnotationTypeElementModifierContext.class);
 		}
@@ -7577,11 +7576,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_annotationTypeElementDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterAnnotationTypeElementDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterAnnotationTypeElementDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitAnnotationTypeElementDeclaration(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitAnnotationTypeElementDeclaration(this);
 		}
 	}
 
@@ -7657,11 +7656,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_annotationTypeElementModifier; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterAnnotationTypeElementModifier(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterAnnotationTypeElementModifier(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitAnnotationTypeElementModifier(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitAnnotationTypeElementModifier(this);
 		}
 	}
 
@@ -7717,11 +7716,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_defaultValue; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterDefaultValue(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterDefaultValue(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitDefaultValue(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitDefaultValue(this);
 		}
 	}
 
@@ -7764,11 +7763,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_annotation; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterAnnotation(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterAnnotation(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitAnnotation(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitAnnotation(this);
 		}
 	}
 
@@ -7825,11 +7824,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_normalAnnotation; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterNormalAnnotation(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterNormalAnnotation(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitNormalAnnotation(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitNormalAnnotation(this);
 		}
 	}
 
@@ -7883,11 +7882,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_elementValuePairList; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterElementValuePairList(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterElementValuePairList(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitElementValuePairList(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitElementValuePairList(this);
 		}
 	}
 
@@ -7930,7 +7929,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class ElementValuePairContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public ElementValueContext elementValue() {
 			return getRuleContext(ElementValueContext.class,0);
 		}
@@ -7940,11 +7939,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_elementValuePair; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterElementValuePair(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterElementValuePair(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitElementValuePair(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitElementValuePair(this);
 		}
 	}
 
@@ -7989,11 +7988,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_elementValue; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterElementValue(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterElementValue(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitElementValue(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitElementValue(this);
 		}
 	}
 
@@ -8047,11 +8046,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_elementValueArrayInitializer; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterElementValueArrayInitializer(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterElementValueArrayInitializer(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitElementValueArrayInitializer(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitElementValueArrayInitializer(this);
 		}
 	}
 
@@ -8110,11 +8109,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_elementValueList; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterElementValueList(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterElementValueList(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitElementValueList(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitElementValueList(this);
 		}
 	}
 
@@ -8168,11 +8167,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_markerAnnotation; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterMarkerAnnotation(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterMarkerAnnotation(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitMarkerAnnotation(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitMarkerAnnotation(this);
 		}
 	}
 
@@ -8212,11 +8211,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_singleElementAnnotation; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterSingleElementAnnotation(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterSingleElementAnnotation(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitSingleElementAnnotation(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitSingleElementAnnotation(this);
 		}
 	}
 
@@ -8259,11 +8258,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_arrayInitializer; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterArrayInitializer(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterArrayInitializer(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitArrayInitializer(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitArrayInitializer(this);
 		}
 	}
 
@@ -8322,11 +8321,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_variableInitializerList; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterVariableInitializerList(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterVariableInitializerList(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitVariableInitializerList(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitVariableInitializerList(this);
 		}
 	}
 
@@ -8380,11 +8379,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_block; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterBlock(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterBlock(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitBlock(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitBlock(this);
 		}
 	}
 
@@ -8434,11 +8433,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_blockStatements; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterBlockStatements(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterBlockStatements(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitBlockStatements(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitBlockStatements(this);
 		}
 	}
 
@@ -8494,11 +8493,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_blockStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterBlockStatement(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterBlockStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitBlockStatement(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitBlockStatement(this);
 		}
 	}
 
@@ -8552,11 +8551,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_localVariableDeclarationStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterLocalVariableDeclarationStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterLocalVariableDeclarationStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitLocalVariableDeclarationStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitLocalVariableDeclarationStatement(this);
 		}
 	}
 
@@ -8602,11 +8601,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_localVariableDeclaration; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterLocalVariableDeclaration(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterLocalVariableDeclaration(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitLocalVariableDeclaration(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitLocalVariableDeclaration(this);
 		}
 	}
 
@@ -8673,11 +8672,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_statement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterStatement(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitStatement(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitStatement(this);
 		}
 	}
 
@@ -8764,11 +8763,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_statementNoShortIf; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterStatementNoShortIf(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterStatementNoShortIf(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitStatementNoShortIf(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitStatementNoShortIf(this);
 		}
 	}
 
@@ -8869,11 +8868,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_statementWithoutTrailingSubstatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterStatementWithoutTrailingSubstatement(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterStatementWithoutTrailingSubstatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitStatementWithoutTrailingSubstatement(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitStatementWithoutTrailingSubstatement(this);
 		}
 	}
 
@@ -9011,11 +9010,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_emptyStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterEmptyStatement(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterEmptyStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitEmptyStatement(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitEmptyStatement(this);
 		}
 	}
 
@@ -9041,7 +9040,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class LabeledStatementContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public StatementContext statement() {
 			return getRuleContext(StatementContext.class,0);
 		}
@@ -9051,11 +9050,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_labeledStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterLabeledStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterLabeledStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitLabeledStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitLabeledStatement(this);
 		}
 	}
 
@@ -9085,7 +9084,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class LabeledStatementNoShortIfContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public StatementNoShortIfContext statementNoShortIf() {
 			return getRuleContext(StatementNoShortIfContext.class,0);
 		}
@@ -9095,11 +9094,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_labeledStatementNoShortIf; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterLabeledStatementNoShortIf(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterLabeledStatementNoShortIf(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitLabeledStatementNoShortIf(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitLabeledStatementNoShortIf(this);
 		}
 	}
 
@@ -9138,11 +9137,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_expressionStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterExpressionStatement(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterExpressionStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitExpressionStatement(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitExpressionStatement(this);
 		}
 	}
 
@@ -9197,11 +9196,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_statementExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterStatementExpression(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterStatementExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitStatementExpression(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitStatementExpression(this);
 		}
 	}
 
@@ -9286,11 +9285,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_ifThenStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterIfThenStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterIfThenStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitIfThenStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitIfThenStatement(this);
 		}
 	}
 
@@ -9339,11 +9338,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_ifThenElseStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterIfThenElseStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterIfThenElseStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitIfThenElseStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitIfThenElseStatement(this);
 		}
 	}
 
@@ -9396,11 +9395,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_ifThenElseStatementNoShortIf; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterIfThenElseStatementNoShortIf(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterIfThenElseStatementNoShortIf(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitIfThenElseStatementNoShortIf(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitIfThenElseStatementNoShortIf(this);
 		}
 	}
 
@@ -9450,11 +9449,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_assertStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterAssertStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterAssertStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitAssertStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitAssertStatement(this);
 		}
 	}
 
@@ -9516,11 +9515,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_switchStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterSwitchStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterSwitchStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitSwitchStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitSwitchStatement(this);
 		}
 	}
 
@@ -9572,11 +9571,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_switchBlock; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterSwitchBlock(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterSwitchBlock(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitSwitchBlock(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitSwitchBlock(this);
 		}
 	}
 
@@ -9648,11 +9647,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_switchBlockStatementGroup; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterSwitchBlockStatementGroup(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterSwitchBlockStatementGroup(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitSwitchBlockStatementGroup(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitSwitchBlockStatementGroup(this);
 		}
 	}
 
@@ -9692,11 +9691,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_switchLabels; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterSwitchLabels(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterSwitchLabels(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitSwitchLabels(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitSwitchLabels(this);
 		}
 	}
 
@@ -9749,11 +9748,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_switchLabel; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterSwitchLabel(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterSwitchLabel(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitSwitchLabel(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitSwitchLabel(this);
 		}
 	}
 
@@ -9808,18 +9807,18 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class EnumConstantNameContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public EnumConstantNameContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_enumConstantName; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterEnumConstantName(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterEnumConstantName(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitEnumConstantName(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitEnumConstantName(this);
 		}
 	}
 
@@ -9857,11 +9856,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_whileStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterWhileStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterWhileStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitWhileStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitWhileStatement(this);
 		}
 	}
 
@@ -9907,11 +9906,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_whileStatementNoShortIf; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterWhileStatementNoShortIf(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterWhileStatementNoShortIf(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitWhileStatementNoShortIf(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitWhileStatementNoShortIf(this);
 		}
 	}
 
@@ -9957,11 +9956,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_doStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterDoStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterDoStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitDoStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitDoStatement(this);
 		}
 	}
 
@@ -10011,11 +10010,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_forStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterForStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterForStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitForStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitForStatement(this);
 		}
 	}
 
@@ -10065,11 +10064,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_forStatementNoShortIf; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterForStatementNoShortIf(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterForStatementNoShortIf(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitForStatementNoShortIf(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitForStatementNoShortIf(this);
 		}
 	}
 
@@ -10125,11 +10124,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_basicForStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterBasicForStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterBasicForStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitBasicForStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitBasicForStatement(this);
 		}
 	}
 
@@ -10211,11 +10210,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_basicForStatementNoShortIf; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterBasicForStatementNoShortIf(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterBasicForStatementNoShortIf(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitBasicForStatementNoShortIf(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitBasicForStatementNoShortIf(this);
 		}
 	}
 
@@ -10291,11 +10290,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_forInit; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterForInit(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterForInit(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitForInit(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitForInit(this);
 		}
 	}
 
@@ -10342,11 +10341,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_forUpdate; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterForUpdate(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterForUpdate(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitForUpdate(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitForUpdate(this);
 		}
 	}
 
@@ -10384,11 +10383,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_statementExpressionList; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterStatementExpressionList(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterStatementExpressionList(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitStatementExpressionList(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitStatementExpressionList(this);
 		}
 	}
 
@@ -10455,11 +10454,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_enhancedForStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterEnhancedForStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterEnhancedForStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitEnhancedForStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitEnhancedForStatement(this);
 		}
 	}
 
@@ -10538,11 +10537,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_enhancedForStatementNoShortIf; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterEnhancedForStatementNoShortIf(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterEnhancedForStatementNoShortIf(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitEnhancedForStatementNoShortIf(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitEnhancedForStatementNoShortIf(this);
 		}
 	}
 
@@ -10597,18 +10596,18 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class BreakStatementContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public BreakStatementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_breakStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterBreakStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterBreakStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitBreakStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitBreakStatement(this);
 		}
 	}
 
@@ -10646,18 +10645,18 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class ContinueStatementContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public ContinueStatementContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_continueStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterContinueStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterContinueStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitContinueStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitContinueStatement(this);
 		}
 	}
 
@@ -10704,11 +10703,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_returnStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterReturnStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterReturnStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitReturnStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitReturnStatement(this);
 		}
 	}
 
@@ -10755,11 +10754,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_throwStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterThrowStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterThrowStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitThrowStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitThrowStatement(this);
 		}
 	}
 
@@ -10801,11 +10800,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_synchronizedStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterSynchronizedStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterSynchronizedStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitSynchronizedStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitSynchronizedStatement(this);
 		}
 	}
 
@@ -10857,11 +10856,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_tryStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterTryStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterTryStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitTryStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitTryStatement(this);
 		}
 	}
 
@@ -10936,11 +10935,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_catches; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterCatches(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterCatches(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitCatches(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitCatches(this);
 		}
 	}
 
@@ -10993,11 +10992,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_catchClause; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterCatchClause(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterCatchClause(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitCatchClause(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitCatchClause(this);
 		}
 	}
 
@@ -11049,11 +11048,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_catchFormalParameter; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterCatchFormalParameter(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterCatchFormalParameter(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitCatchFormalParameter(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitCatchFormalParameter(this);
 		}
 	}
 
@@ -11111,11 +11110,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_catchType; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterCatchType(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterCatchType(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitCatchType(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitCatchType(this);
 		}
 	}
 
@@ -11167,11 +11166,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_finally_; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterFinally_(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterFinally_(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitFinally_(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitFinally_(this);
 		}
 	}
 
@@ -11217,11 +11216,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_tryWithResourcesStatement; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterTryWithResourcesStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterTryWithResourcesStatement(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitTryWithResourcesStatement(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitTryWithResourcesStatement(this);
 		}
 	}
 
@@ -11279,11 +11278,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_resourceSpecification; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterResourceSpecification(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterResourceSpecification(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitResourceSpecification(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitResourceSpecification(this);
 		}
 	}
 
@@ -11335,11 +11334,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_resourceList; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterResourceList(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterResourceList(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitResourceList(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitResourceList(this);
 		}
 	}
 
@@ -11405,11 +11404,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_resource; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterResource(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterResource(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitResource(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitResource(this);
 		}
 	}
 
@@ -11474,11 +11473,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_primary; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterPrimary(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterPrimary(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitPrimary(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitPrimary(this);
 		}
 	}
 
@@ -11564,11 +11563,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_primaryNoNewArray; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterPrimaryNoNewArray(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterPrimaryNoNewArray(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitPrimaryNoNewArray(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitPrimaryNoNewArray(this);
 		}
 	}
 
@@ -11708,11 +11707,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_primaryNoNewArray_lf_arrayAccess; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterPrimaryNoNewArray_lf_arrayAccess(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterPrimaryNoNewArray_lf_arrayAccess(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitPrimaryNoNewArray_lf_arrayAccess(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitPrimaryNoNewArray_lf_arrayAccess(this);
 		}
 	}
 
@@ -11763,11 +11762,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_primaryNoNewArray_lfno_arrayAccess; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterPrimaryNoNewArray_lfno_arrayAccess(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterPrimaryNoNewArray_lfno_arrayAccess(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitPrimaryNoNewArray_lfno_arrayAccess(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitPrimaryNoNewArray_lfno_arrayAccess(this);
 		}
 	}
 
@@ -11915,11 +11914,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_primaryNoNewArray_lf_primary; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterPrimaryNoNewArray_lf_primary(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterPrimaryNoNewArray_lf_primary(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitPrimaryNoNewArray_lf_primary(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitPrimaryNoNewArray_lf_primary(this);
 		}
 	}
 
@@ -11984,11 +11983,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_primaryNoNewArray_lf_primary_lf_arrayAccess_lf_primary; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterPrimaryNoNewArray_lf_primary_lf_arrayAccess_lf_primary(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterPrimaryNoNewArray_lf_primary_lf_arrayAccess_lf_primary(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitPrimaryNoNewArray_lf_primary_lf_arrayAccess_lf_primary(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitPrimaryNoNewArray_lf_primary_lf_arrayAccess_lf_primary(this);
 		}
 	}
 
@@ -12030,11 +12029,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_primaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primary; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterPrimaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primary(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterPrimaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primary(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitPrimaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primary(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitPrimaryNoNewArray_lf_primary_lfno_arrayAccess_lf_primary(this);
 		}
 	}
 
@@ -12119,11 +12118,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_primaryNoNewArray_lfno_primary; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterPrimaryNoNewArray_lfno_primary(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterPrimaryNoNewArray_lfno_primary(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitPrimaryNoNewArray_lfno_primary(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitPrimaryNoNewArray_lfno_primary(this);
 		}
 	}
 
@@ -12290,11 +12289,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_primaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primary; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterPrimaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primary(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterPrimaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primary(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitPrimaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primary(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitPrimaryNoNewArray_lfno_primary_lf_arrayAccess_lfno_primary(this);
 		}
 	}
 
@@ -12348,11 +12347,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_primaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primary; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterPrimaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primary(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterPrimaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primary(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitPrimaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primary(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitPrimaryNoNewArray_lfno_primary_lfno_arrayAccess_lfno_primary(this);
 		}
 	}
 
@@ -12506,9 +12505,9 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class ClassInstanceCreationExpressionContext extends ParserRuleContext {
-		public List<TerminalNode> Identifier() { return getTokens(Java8Parser.Identifier); }
+		public List<TerminalNode> Identifier() { return getTokens(JavaInterfaceParser.Identifier); }
 		public TerminalNode Identifier(int i) {
-			return getToken(Java8Parser.Identifier, i);
+			return getToken(JavaInterfaceParser.Identifier, i);
 		}
 		public TypeArgumentsContext typeArguments() {
 			return getRuleContext(TypeArgumentsContext.class,0);
@@ -12540,11 +12539,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_classInstanceCreationExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterClassInstanceCreationExpression(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterClassInstanceCreationExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitClassInstanceCreationExpression(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitClassInstanceCreationExpression(this);
 		}
 	}
 
@@ -12796,7 +12795,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class ClassInstanceCreationExpression_lf_primaryContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public TypeArgumentsContext typeArguments() {
 			return getRuleContext(TypeArgumentsContext.class,0);
 		}
@@ -12821,11 +12820,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_classInstanceCreationExpression_lf_primary; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterClassInstanceCreationExpression_lf_primary(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterClassInstanceCreationExpression_lf_primary(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitClassInstanceCreationExpression_lf_primary(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitClassInstanceCreationExpression_lf_primary(this);
 		}
 	}
 
@@ -12910,9 +12909,9 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class ClassInstanceCreationExpression_lfno_primaryContext extends ParserRuleContext {
-		public List<TerminalNode> Identifier() { return getTokens(Java8Parser.Identifier); }
+		public List<TerminalNode> Identifier() { return getTokens(JavaInterfaceParser.Identifier); }
 		public TerminalNode Identifier(int i) {
-			return getToken(Java8Parser.Identifier, i);
+			return getToken(JavaInterfaceParser.Identifier, i);
 		}
 		public TypeArgumentsContext typeArguments() {
 			return getRuleContext(TypeArgumentsContext.class,0);
@@ -12941,11 +12940,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_classInstanceCreationExpression_lfno_primary; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterClassInstanceCreationExpression_lfno_primary(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterClassInstanceCreationExpression_lfno_primary(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitClassInstanceCreationExpression_lfno_primary(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitClassInstanceCreationExpression_lfno_primary(this);
 		}
 	}
 
@@ -13141,11 +13140,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_typeArgumentsOrDiamond; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterTypeArgumentsOrDiamond(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterTypeArgumentsOrDiamond(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitTypeArgumentsOrDiamond(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitTypeArgumentsOrDiamond(this);
 		}
 	}
 
@@ -13188,7 +13187,7 @@ public class Java8Parser extends Parser {
 		public PrimaryContext primary() {
 			return getRuleContext(PrimaryContext.class,0);
 		}
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public TypeNameContext typeName() {
 			return getRuleContext(TypeNameContext.class,0);
 		}
@@ -13198,11 +13197,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_fieldAccess; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterFieldAccess(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterFieldAccess(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitFieldAccess(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitFieldAccess(this);
 		}
 	}
 
@@ -13263,18 +13262,18 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class FieldAccess_lf_primaryContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public FieldAccess_lf_primaryContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_fieldAccess_lf_primary; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterFieldAccess_lf_primary(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterFieldAccess_lf_primary(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitFieldAccess_lf_primary(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitFieldAccess_lf_primary(this);
 		}
 	}
 
@@ -13302,7 +13301,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class FieldAccess_lfno_primaryContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public TypeNameContext typeName() {
 			return getRuleContext(TypeNameContext.class,0);
 		}
@@ -13312,11 +13311,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_fieldAccess_lfno_primary; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterFieldAccess_lfno_primary(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterFieldAccess_lfno_primary(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitFieldAccess_lfno_primary(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitFieldAccess_lfno_primary(this);
 		}
 	}
 
@@ -13392,11 +13391,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_arrayAccess; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterArrayAccess(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterArrayAccess(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitArrayAccess(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitArrayAccess(this);
 		}
 	}
 
@@ -13489,11 +13488,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_arrayAccess_lf_primary; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterArrayAccess_lf_primary(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterArrayAccess_lf_primary(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitArrayAccess_lf_primary(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitArrayAccess_lf_primary(this);
 		}
 	}
 
@@ -13574,11 +13573,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_arrayAccess_lfno_primary; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterArrayAccess_lfno_primary(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterArrayAccess_lfno_primary(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitArrayAccess_lfno_primary(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitArrayAccess_lfno_primary(this);
 		}
 	}
 
@@ -13661,7 +13660,7 @@ public class Java8Parser extends Parser {
 		public TypeNameContext typeName() {
 			return getRuleContext(TypeNameContext.class,0);
 		}
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public TypeArgumentsContext typeArguments() {
 			return getRuleContext(TypeArgumentsContext.class,0);
 		}
@@ -13677,11 +13676,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_methodInvocation; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterMethodInvocation(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterMethodInvocation(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitMethodInvocation(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitMethodInvocation(this);
 		}
 	}
 
@@ -13895,7 +13894,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class MethodInvocation_lf_primaryContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public TypeArgumentsContext typeArguments() {
 			return getRuleContext(TypeArgumentsContext.class,0);
 		}
@@ -13908,11 +13907,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_methodInvocation_lf_primary; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterMethodInvocation_lf_primary(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterMethodInvocation_lf_primary(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitMethodInvocation_lf_primary(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitMethodInvocation_lf_primary(this);
 		}
 	}
 
@@ -13972,7 +13971,7 @@ public class Java8Parser extends Parser {
 		public TypeNameContext typeName() {
 			return getRuleContext(TypeNameContext.class,0);
 		}
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public TypeArgumentsContext typeArguments() {
 			return getRuleContext(TypeArgumentsContext.class,0);
 		}
@@ -13985,11 +13984,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_methodInvocation_lfno_primary; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterMethodInvocation_lfno_primary(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterMethodInvocation_lfno_primary(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitMethodInvocation_lfno_primary(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitMethodInvocation_lfno_primary(this);
 		}
 	}
 
@@ -14182,11 +14181,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_argumentList; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterArgumentList(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterArgumentList(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitArgumentList(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitArgumentList(this);
 		}
 	}
 
@@ -14232,7 +14231,7 @@ public class Java8Parser extends Parser {
 		public ExpressionNameContext expressionName() {
 			return getRuleContext(ExpressionNameContext.class,0);
 		}
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public TypeArgumentsContext typeArguments() {
 			return getRuleContext(TypeArgumentsContext.class,0);
 		}
@@ -14257,11 +14256,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_methodReference; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterMethodReference(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterMethodReference(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitMethodReference(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitMethodReference(this);
 		}
 	}
 
@@ -14421,7 +14420,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class MethodReference_lf_primaryContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public TypeArgumentsContext typeArguments() {
 			return getRuleContext(TypeArgumentsContext.class,0);
 		}
@@ -14431,11 +14430,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_methodReference_lf_primary; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterMethodReference_lf_primary(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterMethodReference_lf_primary(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitMethodReference_lf_primary(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitMethodReference_lf_primary(this);
 		}
 	}
 
@@ -14476,7 +14475,7 @@ public class Java8Parser extends Parser {
 		public ExpressionNameContext expressionName() {
 			return getRuleContext(ExpressionNameContext.class,0);
 		}
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public TypeArgumentsContext typeArguments() {
 			return getRuleContext(TypeArgumentsContext.class,0);
 		}
@@ -14498,11 +14497,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_methodReference_lfno_primary; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterMethodReference_lfno_primary(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterMethodReference_lfno_primary(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitMethodReference_lfno_primary(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitMethodReference_lfno_primary(this);
 		}
 	}
 
@@ -14663,11 +14662,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_arrayCreationExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterArrayCreationExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterArrayCreationExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitArrayCreationExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitArrayCreationExpression(this);
 		}
 	}
 
@@ -14769,11 +14768,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_dimExprs; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterDimExprs(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterDimExprs(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitDimExprs(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitDimExprs(this);
 		}
 	}
 
@@ -14831,11 +14830,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_dimExpr; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterDimExpr(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterDimExpr(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitDimExpr(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitDimExpr(this);
 		}
 	}
 
@@ -14889,11 +14888,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_constantExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterConstantExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterConstantExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitConstantExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitConstantExpression(this);
 		}
 	}
 
@@ -14931,11 +14930,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_expression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitExpression(this);
 		}
 	}
 
@@ -14985,11 +14984,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_lambdaExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterLambdaExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterLambdaExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitLambdaExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitLambdaExpression(this);
 		}
 	}
 
@@ -15019,7 +15018,7 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class LambdaParametersContext extends ParserRuleContext {
-		public TerminalNode Identifier() { return getToken(Java8Parser.Identifier, 0); }
+		public TerminalNode Identifier() { return getToken(JavaInterfaceParser.Identifier, 0); }
 		public FormalParameterListContext formalParameterList() {
 			return getRuleContext(FormalParameterListContext.class,0);
 		}
@@ -15032,11 +15031,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_lambdaParameters; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterLambdaParameters(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterLambdaParameters(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitLambdaParameters(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitLambdaParameters(this);
 		}
 	}
 
@@ -15097,9 +15096,9 @@ public class Java8Parser extends Parser {
 	}
 
 	public static class InferredFormalParameterListContext extends ParserRuleContext {
-		public List<TerminalNode> Identifier() { return getTokens(Java8Parser.Identifier); }
+		public List<TerminalNode> Identifier() { return getTokens(JavaInterfaceParser.Identifier); }
 		public TerminalNode Identifier(int i) {
-			return getToken(Java8Parser.Identifier, i);
+			return getToken(JavaInterfaceParser.Identifier, i);
 		}
 		public InferredFormalParameterListContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
@@ -15107,11 +15106,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_inferredFormalParameterList; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterInferredFormalParameterList(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterInferredFormalParameterList(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitInferredFormalParameterList(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitInferredFormalParameterList(this);
 		}
 	}
 
@@ -15166,11 +15165,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_lambdaBody; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterLambdaBody(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterLambdaBody(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitLambdaBody(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitLambdaBody(this);
 		}
 	}
 
@@ -15248,11 +15247,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_assignmentExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterAssignmentExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterAssignmentExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitAssignmentExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitAssignmentExpression(this);
 		}
 	}
 
@@ -15305,11 +15304,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_assignment; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterAssignment(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterAssignment(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitAssignment(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitAssignment(this);
 		}
 	}
 
@@ -15354,11 +15353,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_leftHandSide; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterLeftHandSide(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterLeftHandSide(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitLeftHandSide(this);
+			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitLeftHandSide(this);
 		}
 	}
 
@@ -15409,11 +15408,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_assignmentOperator; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterAssignmentOperator(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterAssignmentOperator(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitAssignmentOperator(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitAssignmentOperator(this);
 		}
 	}
 
@@ -15460,11 +15459,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_conditionalExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterConditionalExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterConditionalExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitConditionalExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitConditionalExpression(this);
 		}
 	}
 
@@ -15522,11 +15521,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_conditionalOrExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterConditionalOrExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterConditionalOrExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitConditionalOrExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitConditionalOrExpression(this);
 		}
 	}
 
@@ -15600,11 +15599,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_conditionalAndExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterConditionalAndExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterConditionalAndExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitConditionalAndExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitConditionalAndExpression(this);
 		}
 	}
 
@@ -15678,11 +15677,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_inclusiveOrExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterInclusiveOrExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterInclusiveOrExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitInclusiveOrExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitInclusiveOrExpression(this);
 		}
 	}
 
@@ -15756,11 +15755,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_exclusiveOrExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterExclusiveOrExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterExclusiveOrExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitExclusiveOrExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitExclusiveOrExpression(this);
 		}
 	}
 
@@ -15834,11 +15833,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_andExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterAndExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterAndExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitAndExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitAndExpression(this);
 		}
 	}
 
@@ -15912,11 +15911,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_equalityExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterEqualityExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterEqualityExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitEqualityExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitEqualityExpression(this);
 		}
 	}
 
@@ -16010,11 +16009,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_relationalExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterRelationalExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterRelationalExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitRelationalExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitRelationalExpression(this);
 		}
 	}
 
@@ -16141,11 +16140,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_shiftExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterShiftExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterShiftExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitShiftExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitShiftExpression(this);
 		}
 	}
 
@@ -16256,11 +16255,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_additiveExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterAdditiveExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterAdditiveExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitAdditiveExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitAdditiveExpression(this);
 		}
 	}
 
@@ -16351,11 +16350,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_multiplicativeExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterMultiplicativeExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterMultiplicativeExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitMultiplicativeExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitMultiplicativeExpression(this);
 		}
 	}
 
@@ -16464,11 +16463,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_unaryExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterUnaryExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterUnaryExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitUnaryExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitUnaryExpression(this);
 		}
 	}
 
@@ -16564,11 +16563,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_preIncrementExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterPreIncrementExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterPreIncrementExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitPreIncrementExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitPreIncrementExpression(this);
 		}
 	}
 
@@ -16605,11 +16604,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_preDecrementExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterPreDecrementExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterPreDecrementExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitPreDecrementExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitPreDecrementExpression(this);
 		}
 	}
 
@@ -16652,11 +16651,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_unaryExpressionNotPlusMinus; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterUnaryExpressionNotPlusMinus(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterUnaryExpressionNotPlusMinus(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitUnaryExpressionNotPlusMinus(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitUnaryExpressionNotPlusMinus(this);
 		}
 	}
 
@@ -16736,11 +16735,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_postfixExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterPostfixExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterPostfixExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitPostfixExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitPostfixExpression(this);
 		}
 	}
 
@@ -16818,11 +16817,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_postIncrementExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterPostIncrementExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterPostIncrementExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitPostIncrementExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitPostIncrementExpression(this);
 		}
 	}
 
@@ -16856,11 +16855,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_postIncrementExpression_lf_postfixExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterPostIncrementExpression_lf_postfixExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterPostIncrementExpression_lf_postfixExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitPostIncrementExpression_lf_postfixExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitPostIncrementExpression_lf_postfixExpression(this);
 		}
 	}
 
@@ -16895,11 +16894,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_postDecrementExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterPostDecrementExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterPostDecrementExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitPostDecrementExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitPostDecrementExpression(this);
 		}
 	}
 
@@ -16933,11 +16932,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_postDecrementExpression_lf_postfixExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterPostDecrementExpression_lf_postfixExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterPostDecrementExpression_lf_postfixExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitPostDecrementExpression_lf_postfixExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitPostDecrementExpression_lf_postfixExpression(this);
 		}
 	}
 
@@ -16990,11 +16989,11 @@ public class Java8Parser extends Parser {
 		@Override public int getRuleIndex() { return RULE_castExpression; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).enterCastExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).enterCastExpression(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof Java8Listener ) ((Java8Listener)listener).exitCastExpression(this);
+//			if ( listener instanceof JavaInterfaceListener ) ((JavaInterfaceListener)listener).exitCastExpression(this);
 		}
 	}
 
