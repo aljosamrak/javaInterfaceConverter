@@ -1,4 +1,4 @@
-package com.pinko;// Generated from Java8.g4 by ANTLR 4.5
+package com.pinko.parser;// Generated from Java8.g4 by ANTLR 4.5
 
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
