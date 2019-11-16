@@ -1,5 +1,7 @@
 package com.pinko;
 
+import com.pinko.parser.Java8Lexer;
+import com.pinko.parser.Java8Parser;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
 import java.io.FileInputStream;
@@ -23,7 +25,7 @@ public class J2Swift
         ANTLRInputStream input = new ANTLRInputStream(is);
         Java8Lexer lexer = new Java8Lexer(input);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
-        JavaInterfaceParser parser = new JavaInterfaceParser(tokens);
+        Java8Parser parser = new Java8Parser(tokens);
         ParseTree tree = parser.compilationUnit();
         ParseTreeWalker walker = new ParseTreeWalker();
         SwiftInterfaceListener swiftListener = new SwiftInterfaceListener(tokens);

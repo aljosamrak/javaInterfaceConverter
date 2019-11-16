@@ -1,5 +1,8 @@
 package com.pinko;
 
+import com.pinko.parser.Java8Lexer;
+import com.pinko.parser.Java8BaseListener;
+import com.pinko.parser.Java8Parser;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.misc.Interval;
 import org.antlr.v4.runtime.tree.TerminalNode;
@@ -20,7 +23,7 @@ import java.util.Map;
  *
  * @author Pat Niemeyer (pat@pat.net)
  */
-public class SwiftInterfaceListener extends JavaInterfaceBaseListener
+public class SwiftInterfaceListener extends Java8BaseListener
 {
     CommonTokenStream tokens;
 
@@ -58,19 +61,19 @@ public class SwiftInterfaceListener extends JavaInterfaceBaseListener
         this.rewriter = new TokenStreamRewriter( tokens );
     }
 
-    JavaInterfaceParser.UnannTypeContext unannType;
+    Java8Parser.UnannTypeContext unannType;
 
-    @Override public void enterConstantDeclaration( JavaInterfaceParser.ConstantDeclarationContext ctx ) {
+    @Override public void enterConstantDeclaration( Java8Parser.ConstantDeclarationContext ctx ) {
         //:	constantModifier* unannType variableDeclaratorList ';'
         unannType = ctx.unannType();
     }
-    @Override public void exitConstantDeclaration( JavaInterfaceParser.ConstantDeclarationContext ctx ) {
+    @Override public void exitConstantDeclaration( Java8Parser.ConstantDeclarationContext ctx ) {
         replace( ctx.unannType(), "var" );
         unannType = null;
     }
 
     @Override
-    public void enterFormalParameterList( JavaInterfaceParser.FormalParameterListContext ctx )
+    public void enterFormalParameterList( Java8Parser.FormalParameterListContext ctx )
     {
         // called from methodDeclarator
         //:	formalParameters ',' lastFormalParameter
@@ -79,7 +82,7 @@ public class SwiftInterfaceListener extends JavaInterfaceBaseListener
     }
 
     @Override
-    public void enterFormalParameters( JavaInterfaceParser.FormalParametersContext ctx )
+    public void enterFormalParameters( Java8Parser.FormalParametersContext ctx )
     {
         // called from formalParameterList
         //:	formalParameter (',' formalParameter)*
@@ -88,7 +91,7 @@ public class SwiftInterfaceListener extends JavaInterfaceBaseListener
     }
 
     @Override
-    public void exitFormalParameter( JavaInterfaceParser.FormalParameterContext ctx )
+    public void exitFormalParameter( Java8Parser.FormalParameterContext ctx )
     {
         rewriter.insertAfter( ctx.variableDeclaratorId().stop, " : " + getText( ctx.unannType() ) );
 
@@ -101,7 +104,7 @@ public class SwiftInterfaceListener extends JavaInterfaceBaseListener
     }
 
     @Override
-    public void exitMethodHeader( JavaInterfaceParser.MethodHeaderContext ctx )
+    public void exitMethodHeader( Java8Parser.MethodHeaderContext ctx )
     {
         //:	result methodDeclarator throws_?
         //|	typeParameters annotation* result methodDeclarator throws_?
@@ -112,17 +115,17 @@ public class SwiftInterfaceListener extends JavaInterfaceBaseListener
     }
 
     @Override
-    public void enterPackageDeclaration( JavaInterfaceParser.PackageDeclarationContext ctx ) {
+    public void enterPackageDeclaration( Java8Parser.PackageDeclarationContext ctx ) {
         rewriter.insertBefore( ctx.start, "// " );
     }
 
     @Override
-    public void enterPrimaryNoNewArray_lfno_primary( JavaInterfaceParser.PrimaryNoNewArray_lfno_primaryContext ctx ) {
+    public void enterPrimaryNoNewArray_lfno_primary( Java8Parser.PrimaryNoNewArray_lfno_primaryContext ctx ) {
         if ( ctx.getText().equals( "this" )) { replace( ctx, "self" ); }
     }
 
     @Override
-    public void enterLiteral( JavaInterfaceParser.LiteralContext ctx )
+    public void enterLiteral( Java8Parser.LiteralContext ctx )
     {
         //IntegerLiteral
         //        |	FloatingPointLiteral
@@ -144,7 +147,7 @@ public class SwiftInterfaceListener extends JavaInterfaceBaseListener
 
 
     @Override
-    public void exitClassInstanceCreationExpression( JavaInterfaceParser.ClassInstanceCreationExpressionContext ctx )
+    public void exitClassInstanceCreationExpression( Java8Parser.ClassInstanceCreationExpressionContext ctx )
     {
         //:	'new' typeArguments? annotation* Identifier ('.' annotation* Identifier)* typeArgumentsOrDiamond? '(' argumentList? ')' classBody?
         //|	expressionName '.' 'new' typeArguments? annotation* Identifier typeArgumentsOrDiamond? '(' argumentList? ')' classBody?
@@ -157,7 +160,7 @@ public class SwiftInterfaceListener extends JavaInterfaceBaseListener
     }
 
     @Override
-    public void enterClassInstanceCreationExpression_lfno_primary( JavaInterfaceParser.ClassInstanceCreationExpression_lfno_primaryContext ctx )
+    public void enterClassInstanceCreationExpression_lfno_primary( Java8Parser.ClassInstanceCreationExpression_lfno_primaryContext ctx )
     {
         //:	'new' typeArguments? annotation* Identifier ('.' annotation* Identifier)* typeArgumentsOrDiamond? '(' argumentList? ')' classBody?
         //|	expressionName '.' 'new' typeArguments? annotation* Identifier typeArgumentsOrDiamond? '(' argumentList? ')' classBody?
@@ -169,7 +172,7 @@ public class SwiftInterfaceListener extends JavaInterfaceBaseListener
     }
 
     @Override
-    public void exitUnannType( JavaInterfaceParser.UnannTypeContext ctx )
+    public void exitUnannType( Java8Parser.UnannTypeContext ctx )
     {
         // mapping may already have been done by more specific rule but this shouldn't hurt it
         // todo: this needs to be more specific, preventing rewrites on generic type args
@@ -179,7 +182,7 @@ public class SwiftInterfaceListener extends JavaInterfaceBaseListener
     }
 
     @Override
-    public void exitArrayType( JavaInterfaceParser.ArrayTypeContext ctx ) {
+    public void exitArrayType( Java8Parser.ArrayTypeContext ctx ) {
         //:	primitiveType dims
         //|	classOrInterfaceType dims
         //|	typeVariable dims
@@ -195,7 +198,7 @@ public class SwiftInterfaceListener extends JavaInterfaceBaseListener
     }
 
     @Override
-    public void exitUnannArrayType( JavaInterfaceParser.UnannArrayTypeContext ctx ) {
+    public void exitUnannArrayType( Java8Parser.UnannArrayTypeContext ctx ) {
         //:	unannPrimitiveType dims
         //|	unannClassOrInterfaceType dims
         //|	unannTypeVariable dims
@@ -211,17 +214,17 @@ public class SwiftInterfaceListener extends JavaInterfaceBaseListener
     }
 
     @Override
-    public void enterImportDeclaration( JavaInterfaceParser.ImportDeclarationContext ctx )
+    public void enterImportDeclaration( Java8Parser.ImportDeclarationContext ctx )
     {
         rewriter.insertBefore( ctx.start, "// " );
     }
     @Override
-    public void exitClassModifier( JavaInterfaceParser.ClassModifierContext ctx ) {
+    public void exitClassModifier( Java8Parser.ClassModifierContext ctx ) {
         replace( ctx, mapModifier( ctx ) );
     }
 
     @Override
-    public void enterNormalInterfaceDeclaration( JavaInterfaceParser.NormalInterfaceDeclarationContext ctx )
+    public void enterNormalInterfaceDeclaration( Java8Parser.NormalInterfaceDeclarationContext ctx )
     {
         //:	interfaceModifier* 'interface' Identifier typeParameters? extendsInterfaces? interfaceBody
         List<TerminalNode> intfTokens = ctx.getTokens( Java8Lexer.INTERFACE );
@@ -235,7 +238,7 @@ public class SwiftInterfaceListener extends JavaInterfaceBaseListener
     }
 
     @Override
-    public void exitUnannClassType_lfno_unannClassOrInterfaceType( JavaInterfaceParser.UnannClassType_lfno_unannClassOrInterfaceTypeContext ctx )
+    public void exitUnannClassType_lfno_unannClassOrInterfaceType( Java8Parser.UnannClassType_lfno_unannClassOrInterfaceTypeContext ctx )
     {
         //unannClassType_lfno_unannClassOrInterfaceType
         //:	Identifier typeArguments?
@@ -243,7 +246,7 @@ public class SwiftInterfaceListener extends JavaInterfaceBaseListener
     }
 
     @Override
-    public void exitTypeArgumentsOrDiamond( JavaInterfaceParser.TypeArgumentsOrDiamondContext ctx )
+    public void exitTypeArgumentsOrDiamond( Java8Parser.TypeArgumentsOrDiamondContext ctx )
     {
         //:	typeArguments
         //        |	'<' '>'
