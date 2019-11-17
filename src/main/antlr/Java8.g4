@@ -36,6 +36,10 @@
 
 grammar Java8;
 
+@header {
+package com.pinko.parser;
+}
+
 /*
  * Productions from §3 (Lexical Structure)
  */
